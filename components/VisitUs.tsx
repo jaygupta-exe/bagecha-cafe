@@ -148,7 +148,7 @@ export default function VisitUs() {
           <div className="visit-map-wrapper">
             <iframe
               title="Bagecha Cafe Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.5!2d75.57!3d31.32!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5a5747a9e5f7%3A0x0!2sBagecha%2C%20Doaba%20Chowk%2C%20Jalandhar!5e0!3m2!1sen!2sin!4v1711000000000"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.5!2d75.57!3d31.32!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5b4a610e3df1%3A0xaefe7c7cf872e909!2sBagecha!5e0!3m2!1sen!2sin!4v1711000000000"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -184,7 +184,7 @@ export default function VisitUs() {
                   Pura, Jalandhar, Punjab 144008
                 </p>
                 <a
-                  href="https://maps.app.goo.gl/dBZbnaxZPWm3XWWt5?g_st=aw"
+                  href="https://www.google.com/maps/place/Bagecha,+Bagecha,+Doaba+Chowk,+Near+Doaba+Chowk,+Vikas+Puri,+Santokh+Pura,+Jalandhar,+Punjab+144008/data=!4m2!3m1!1s0x391a5b4a610e3df1:0xaefe7c7cf872e909"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block mt-3 text-xs tracking-[0.15em] text-white/35 uppercase hover:text-white/60 transition-colors"
