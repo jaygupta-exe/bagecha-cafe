@@ -106,23 +106,6 @@ export default function VisitUs() {
           Visit Us
         </p>
 
-        {/* Logo */}
-        <motion.div
-          className="flex justify-center mb-6"
-          initial={{ opacity: 0, scale: 0.85 }}
-          animate={isInView ? { opacity: 1, scale: 1 } : {}}
-          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <div className="relative w-32 h-32 md:w-40 md:h-40">
-            <Image
-              src="/logo.png"
-              alt="Bagecha by Adi's Cafe"
-              fill
-              className="object-contain drop-shadow-[0_4px_24px_rgba(245,230,211,0.12)]"
-              sizes="160px"
-            />
-          </div>
-        </motion.div>
 
         <div className="flex items-center justify-center gap-3 mb-3">
           <LeafIcon />

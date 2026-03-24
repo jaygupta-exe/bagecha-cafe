@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 interface PreloaderProps {
   progress: number;
@@ -51,26 +52,22 @@ export default function Preloader({ progress, isLoaded }: PreloaderProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            {/* Brand name */}
-            <div className="text-center">
-              <motion.h1
-                className="text-5xl md:text-7xl font-bold tracking-[0.2em] text-white/90"
-                style={{ fontFamily: "var(--font-playfair)" }}
-                initial={{ opacity: 0, letterSpacing: "0.5em" }}
-                animate={{ opacity: 1, letterSpacing: "0.2em" }}
-                transition={{ duration: 1.2, delay: 0.3 }}
-              >
-                HOMIE
-              </motion.h1>
-              <motion.p
-                className="mt-3 text-sm md:text-base tracking-[0.4em] text-white/50 uppercase"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
-              >
-                Coffee
-              </motion.p>
-            </div>
+            {/* Logo image */}
+            <motion.div
+              className="relative w-36 h-36 md:w-48 md:h-48"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <Image
+                src="/logo.png"
+                alt="Bagecha by Adi's Cafe"
+                fill
+                className="object-contain drop-shadow-[0_4px_30px_rgba(245,230,211,0.15)]"
+                sizes="192px"
+                priority
+              />
+            </motion.div>
 
             {/* Progress section */}
             <div className="flex flex-col items-center gap-4 w-64 md:w-80">

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, useCallback } from "react";
 import { useScroll, useTransform, useMotionValueEvent } from "framer-motion";
+import Image from "next/image";
 import Preloader from "./Preloader";
 import TextOverlay from "./TextOverlay";
 
@@ -168,6 +169,37 @@ export default function CoffeeScroll() {
             className="h-full w-full"
             style={{ display: "block" }}
           />
+
+          {/* Logo in top-left corner */}
+          <div
+            className="absolute top-5 left-5 md:top-8 md:left-8 z-20"
+            style={{
+              opacity: showContent ? 1 : 0,
+              transition: "opacity 0.8s ease-in-out 0.3s",
+            }}
+          >
+            <div
+              className="relative w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full overflow-hidden"
+              style={{
+                background: "rgba(0, 115, 92, 0.35)",
+                backdropFilter: "blur(12px)",
+                WebkitBackdropFilter: "blur(12px)",
+                border: "1px solid rgba(245, 230, 211, 0.1)",
+                boxShadow: "0 4px 24px rgba(0, 0, 0, 0.2)",
+                padding: "6px",
+              }}
+            >
+              <Image
+                src="/logo.png"
+                alt="Bagecha by Adi's Cafe"
+                fill
+                className="object-contain p-1"
+                sizes="96px"
+                priority
+              />
+            </div>
+          </div>
+
           {/* Text overlays positioned above the canvas */}
           <TextOverlay scrollYProgress={scrollYProgress} />
         </div>
