@@ -107,7 +107,7 @@ export default function CoffeeScroll() {
     const images: HTMLImageElement[] = [];
 
     for (let i = 0; i < FRAME_COUNT; i++) {
-      const img = new Image();
+      const img = new window.Image();
       img.src = getFramePath(i);
 
       img.onload = () => {
