@@ -1,6 +1,7 @@
 import CoffeeScroll from "@/components/CoffeeScroll";
 import CategoryShowcase from "@/components/CategoryShowcase";
 import FloatingParticles from "@/components/FloatingParticles";
+import VisitUs from "@/components/VisitUs";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -14,6 +15,9 @@ export default function Home() {
 
       {/* Category showcases after hero */}
       <CategoryShowcase />
+
+      {/* Visit Us — map, hours, contact, socials */}
+      <VisitUs />
 
       {/* Footer */}
       <Footer />
