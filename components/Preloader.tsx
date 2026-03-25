@@ -14,7 +14,7 @@ export default function Preloader({ progress, isLoaded }: PreloaderProps) {
       {!isLoaded && (
         <motion.div
           className="fixed inset-0 z-50 flex flex-col items-center justify-center"
-          style={{ backgroundColor: "#00735C" }}
+          style={{ backgroundColor: "#3a820370" }}
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
