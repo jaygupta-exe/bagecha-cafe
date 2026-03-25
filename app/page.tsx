@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="relative" style={{ backgroundColor: "#556B2F" }}>
+    <main className="relative" style={{ backgroundColor: "#364c11" }}>
       {/* Ambient floating particles across entire page */}
       <FloatingParticles />
 
