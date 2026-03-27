@@ -1,6 +1,6 @@
 import CoffeeScroll from "@/components/CoffeeScroll";
 import CategoryShowcase from "@/components/CategoryShowcase";
-import PizzaMenu from "@/components/PizzaMenu";
+import FullMenu from "@/components/FullMenu";
 import FloatingParticles from "@/components/FloatingParticles";
 import VisitUs from "@/components/VisitUs";
 import Footer from "@/components/Footer";
@@ -14,8 +14,8 @@ export default function Home() {
       {/* Hero: scroll-linked image sequence animation */}
       <CoffeeScroll />
 
-      {/* Premium Pizza Menu Showcase */}
-      <PizzaMenu />
+      {/* Complete Extensive Cafe Menu Showcase */}
+      <FullMenu />
 
       {/* Category showcases after hero */}
       <CategoryShowcase />
