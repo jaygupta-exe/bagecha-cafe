@@ -125,7 +125,7 @@ function CategoryCard({
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const layout = layoutCycle[index % 3];
 
-  // Very subtle glow variations — no color shift from base #00735C
+  // Very subtle glow variations — no color shift from base #364c11
   const bgGradients = [
     "radial-gradient(ellipse at 30% 50%, rgba(245,230,211,0.02) 0%, transparent 70%)",
     "radial-gradient(ellipse at 70% 50%, rgba(245,230,211,0.015) 0%, transparent 70%)",

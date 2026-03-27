@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-homie-green: #00735C;
-  --color-homie-green-dark: #005A47;
+  --color-homie-green: #364c11;
+  --color-homie-green-dark: #2A3B0D;
   --color-homie-cream: #F5E6D3;
   --font-serif: "Playfair Display", Georgia, serif;
   --font-sans: "Inter", system-ui, sans-serif;
@@ -26,7 +26,7 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #005A47;
+  background: #2A3B0D;
 }
 ::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.3);
@@ -237,13 +237,13 @@ body {
 .visit-map-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 115, 92, 0.15);
+  background: rgba(54, 76, 17, 0.15);
   pointer-events: none;
   transition: background 0.5s ease;
 }
 
 .visit-map-wrapper:hover .visit-map-overlay {
-  background: rgba(0, 115, 92, 0.05);
+  background: rgba(54, 76, 17, 0.05);
 }
 
 /* CTA Buttons */

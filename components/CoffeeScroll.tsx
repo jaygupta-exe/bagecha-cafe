@@ -76,7 +76,14 @@ export default function CoffeeScroll() {
       offsetY = (displayHeight - drawHeight) / 2;
     }
 
+    ctx.globalCompositeOperation = "source-over";
     ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
+
+    // Apply color tint to the frame
+    ctx.globalCompositeOperation = "color"; // You can change this to "multiply" for a darker effect
+    ctx.fillStyle = "#364c11";
+    ctx.fillRect(0, 0, displayWidth, displayHeight);
+    ctx.globalCompositeOperation = "source-over"; // Reset
   }, []);
 
   // RAF render loop
@@ -181,7 +188,7 @@ export default function CoffeeScroll() {
             <div
               className="relative w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full overflow-hidden"
               style={{
-                background: "rgba(0, 115, 92, 0.35)",
+                background: "rgba(54, 76, 17, 0.35)",
                 backdropFilter: "blur(12px)",
                 WebkitBackdropFilter: "blur(12px)",
                 border: "1px solid rgba(245, 230, 211, 0.1)",
