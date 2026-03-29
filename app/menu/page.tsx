@@ -5,11 +5,13 @@ import Footer from "@/components/Footer";
 import { MENU_DATA } from "@/data/menu";
 import MenuCategorySection from "@/components/MenuCategorySection";
 import { motion } from "framer-motion";
+import FloatingParticles from "@/components/FloatingParticles";
 
 export default function MenuPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-[#1f3d1f] to-[#0f1f0f] text-[#F5E6D3] overflow-x-hidden selection:bg-[#364c11]">
+    <main className="min-h-screen bg-[#364c11] text-[#F5E6D3] overflow-x-hidden selection:bg-[#364c11] relative">
       <Navbar />
+      <FloatingParticles />
 
       {/* Hero Section for Menu */}
       <section className="relative pt-36 pb-16 md:pt-48 md:pb-24 px-4 text-center z-10">
