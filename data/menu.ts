@@ -20,142 +20,35 @@ const generateImageForItem = (itemName: string, context: string): string => {
   return `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?width=600&height=600&nologo=true`;
 };
 
-const PIZZA_ITEMS: MenuItem[] = [
-  { name: "Melted Bliss Margherita", price: "₹249" },
-  { name: "Golden Cheese Corn Pizza", price: "₹269" },
-  { name: "Exotic Farmhouse Pizza", price: "₹289" },
-  { name: "Chilly Mushroom Fantasy", price: "₹299" },
-  { name: "Tandoori Paneer Tikka Pizza", price: "₹329" },
-  { name: "Adi's Garden Authentic Pizza", price: "₹349" },
-];
+const PIZZA_ITEMS: MenuItem[] = [];
 
-const GARLIC_BREAD_ITEMS: MenuItem[] = [
-  { name: "Cheese Corn Garlic Bread", price: "₹179" },
-  { name: "Paneer Tikka Garlic Bread", price: "₹219" },
-];
+const GARLIC_BREAD_ITEMS: MenuItem[] = [];
 
-const BRUSCHETTA_ITEMS: MenuItem[] = [
-  { name: "Tuscan Tomato Bruschetta", price: "₹179" },
-  { name: "Wild Mushroom Bruschetta", price: "₹199" },
-];
+const BRUSCHETTA_ITEMS: MenuItem[] = [];
 
-const PASTA_ITEMS: MenuItem[] = [
-  { name: "Creamy Alfredo Pasta", price: "₹219" },
-  { name: "Al-arrabbiata Mix Sauce Pasta", price: "₹229" },
-  { name: "Adi's Mushroom Sauce Pasta", price: "₹249" },
-];
+const PASTA_ITEMS: MenuItem[] = [];
 
-const WRAP_ITEMS: MenuItem[] = [
-  { name: "Exotic Veggie Wrap", price: "₹139" },
-  { name: "Paneer Crunch Wrap", price: "₹159" },
-  { name: "Smoky Paneer Tikka Wrap", price: "₹179" },
-];
+const WRAP_ITEMS: MenuItem[] = [];
 
-const MUNCHIES_ITEMS: MenuItem[] = [
-  { name: "Cottage Cheese Cigar Rolls", price: "₹189" },
-  { name: "Veggie Spring Rolls", price: "₹169" },
-  { name: "Hara Bhara Kababs", price: "₹179" },
-  { name: "Crispy Potato Wedges", price: "₹169" },
-  { name: "Mexican Salsa Nachos", price: "₹159" },
-  { name: "Cheese Jalapeno Nachos", price: "₹179" },
-];
+const MUNCHIES_ITEMS: MenuItem[] = [];
 
-const SHAKES_ITEMS: MenuItem[] = [
-  { name: "Vanilla Shake", price: "₹139" },
-  { name: "Chocolate Shake", price: "₹139" },
-  { name: "Mango Shake", price: "₹149" },
-  { name: "Strawberry Shake", price: "₹149" },
-  { name: "Butterscotch Shake", price: "₹149" },
-  { name: "Black Current Shake", price: "₹159" },
-  { name: "Down Town Oreo Shake", price: "₹169" },
-  { name: "Choco Chip Shake", price: "₹169" },
-  { name: "Kitkat Shake", price: "₹179" },
-  { name: "Romanian Tiramisu Shake", price: "₹179" },
-  { name: "Rich Blueberry Shake", price: "₹179" },
-  { name: "Biscoff Brown Butter Shake", price: "₹189" },
-];
+const SHAKES_ITEMS: MenuItem[] = [];
 
-const MOCKTAILS_ITEMS: MenuItem[] = [
-  { name: "Virgin Mint Mojito", price: "₹129" },
-  { name: "Tropical Green Apple", price: "₹129" },
-  { name: "Peach Paradise", price: "₹139" },
-  { name: "Blue Blossom", price: "₹139" },
-  { name: "Passion Fruit Punch", price: "₹149" },
-  { name: "Watermelon Wave", price: "₹139" },
-  { name: "Fresh Lime Soda", price: "₹89" },
-  { name: "Coconut Pina Colada", price: "₹159" },
-  { name: "Lemon Ice Tea", price: "₹119" },
-  { name: "Peach Ice Tea", price: "₹129" },
-];
+const MOCKTAILS_ITEMS: MenuItem[] = [];
 
-const SANDWICH_ITEMS: MenuItem[] = [
-  { name: "Spinach Corn Sandwich", price: "₹169" },
-  { name: "Pizza Cheese Sandwich", price: "₹169" },
-  { name: "Pan Mushroom Sandwich", price: "₹179" },
-  { name: "Adi's Oriental Sandwich", price: "₹179" },
-  { name: "Paneer Tikka Sandwich", price: "₹189" },
-  { name: "Bagecha Signature Sandwich", price: "₹199" },
-  { name: "Garden Club Sandwich", price: "₹219" },
-];
+const SANDWICH_ITEMS: MenuItem[] = [];
 
-const BURGERS_ITEMS: MenuItem[] = [
-  { name: "Adi's Aloo Tikki Burger", price: "₹69" },
-  { name: "Classic Veggie Burger", price: "₹89" },
-  { name: "Crispy Paneer Burger", price: "₹109" },
-  { name: "Big Daddy Smash Burger", price: "₹129" },
-  { name: "Spinach Mushroom Cheese Burger", price: "₹149" },
-];
+const BURGERS_ITEMS: MenuItem[] = [];
 
-const FRIES_ITEMS: MenuItem[] = [
-  { name: "Classic Salted Fries", price: "₹139" },
-  { name: "Peri-peri Fries", price: "₹159" },
-  { name: "Adi's Italiano Cheese Fries", price: "₹179" },
-  { name: "Spicy Mexican Fries", price: "₹179" },
-];
+const FRIES_ITEMS: MenuItem[] = [];
 
-const HOT_COFFEE_ITEMS: MenuItem[] = [
-  { name: "Espresso", price: "₹79" },
-  { name: "Americano", price: "₹99" },
-  { name: "Cappuccino / Latte", price: "₹129" },
-  { name: "Hot Mocha", price: "₹149" },
-  { name: "Hazelnut Cappuccino / Latte", price: "₹149" },
-  { name: "Vanilla Cappuccino / Latte", price: "₹149" },
-  { name: "Tiramisu Cappuccino / Latte", price: "₹159" },
-  { name: "Brown Butter Cappuccino / Latte", price: "₹159" },
-  { name: "Roasted Hazelnut Cappuccino / Latte", price: "₹159" },
-  { name: "Toasted Almond Cappuccino / Latte", price: "₹169" },
-  { name: "Signature Hot Chocolate", price: "₹149" },
-  { name: "Special Brownie Hot Chocolate", price: "₹159" },
-];
+const HOT_COFFEE_ITEMS: MenuItem[] = [];
 
-const COLD_COFFEE_ITEMS: MenuItem[] = [
-  { name: "Adi's Classic Coffee", price: "₹149" },
-  { name: "Choco Mocha Coffee", price: "₹159" },
-  { name: "French Vanilla Coffee", price: "₹159" },
-  { name: "Roasted Hazelnut Coffee", price: "₹169" },
-  { name: "Irish Cream Coffee", price: "₹169" },
-  { name: "Toasted Almond Coffee", price: "₹179" },
-  { name: "Frosted Tiramisu Coffee", price: "₹179" },
-  { name: "Buttery Bliss Coffee", price: "₹179" },
-];
+const COLD_COFFEE_ITEMS: MenuItem[] = [];
 
-const MATCHA_ITEMS: MenuItem[] = [
-  { name: "Hot Matcha", price: "₹149" },
-  { name: "Iced Matcha", price: "₹159" },
-  { name: "Iced Vanilla Matcha", price: "₹169" },
-  { name: "Iced Strawberry Matcha", price: "₹169" },
-  { name: "Tulsi Green Tea", price: "₹79" },
-  { name: "Honey Chamomile Tea", price: "₹89" },
-  { name: "Ginger Honey Lemon Tea", price: "₹89" },
-];
+const MATCHA_ITEMS: MenuItem[] = [];
 
-const ICED_LATTE_ITEMS: MenuItem[] = [
-  { name: "Adi's Iced Latte", price: "₹139" },
-  { name: "Choco Mocha Iced Latte", price: "₹149" },
-  { name: "French Vanilla Iced Latte", price: "₹149" },
-  { name: "Roasted Hazelnut Iced Latte", price: "₹159" },
-  { name: "Almond / Tiramisu / Brown Butter", price: "₹169" },
-];
+const ICED_LATTE_ITEMS: MenuItem[] = [];
 
 export const MENU_DATA: MenuCategory[] = [
   {
