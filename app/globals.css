@@ -318,3 +318,34 @@ body {
     0 0 8px rgba(245, 230, 211, 0.15),
     0 0 24px rgba(245, 230, 211, 0.06);
 }
+
+/* ==========================================
+   MENU PAGE STYLES - MARQUEE & SCROLL
+   ========================================== */
+
+/* Marquee infinite scroll */
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Menu dotted leader for price lists */
+.menu-leader {
+  flex-grow: 1;
+  border-bottom: 2px dotted rgba(245, 230, 211, 0.3);
+  margin: 0 0.5rem;
+  position: relative;
+  top: -6px;
+}
