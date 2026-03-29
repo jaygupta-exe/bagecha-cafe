@@ -1,4 +1,4 @@
-import CoffeeScroll from "@/components/CoffeeScroll";
+import HeroSlider from "@/components/HeroSlider";
 import CategoryShowcase from "@/components/CategoryShowcase";
 import FullMenu from "@/components/FullMenu";
 import FloatingParticles from "@/components/FloatingParticles";
@@ -11,8 +11,8 @@ export default function Home() {
       {/* Ambient floating particles across entire page */}
       <FloatingParticles />
 
-      {/* Hero: scroll-linked image sequence animation */}
-      <CoffeeScroll />
+      {/* Hero: cinematic video slider */}
+      <HeroSlider />
 
       {/* Complete Extensive Cafe Menu Showcase */}
       <FullMenu />
