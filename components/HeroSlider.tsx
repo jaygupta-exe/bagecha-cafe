@@ -90,29 +90,7 @@ export default function HeroSlider() {
       {/* Dark Gradient Overlay for readability on the left */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-20 pointer-events-none" />
 
-      {/* Logo Component (Fixed Top Left) */}
-      <div className="absolute top-5 left-5 md:top-8 md:left-8 z-30">
-        <div
-          className="relative w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full overflow-hidden"
-          style={{
-            background: "rgba(54, 76, 17, 0.35)",
-            backdropFilter: "blur(12px)",
-            WebkitBackdropFilter: "blur(12px)",
-            border: "1px solid rgba(245, 230, 211, 0.1)",
-            boxShadow: "0 4px 24px rgba(0, 0, 0, 0.2)",
-            padding: "6px",
-          }}
-        >
-          <Image
-            src="/logo.png"
-            alt="Bagecha by Adi's Cafe"
-            fill
-            className="object-contain p-1"
-            sizes="96px"
-            priority
-          />
-        </div>
-      </div>
+
 
       {/* Text Content */}
       <div className="absolute inset-0 flex items-center z-30 px-6 md:px-16 lg:px-24">
