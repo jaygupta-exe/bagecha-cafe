@@ -1,6 +1,5 @@
 import HeroSlider from "@/components/HeroSlider";
-import CategoryShowcase from "@/components/CategoryShowcase";
-import FullMenu from "@/components/FullMenu";
+
 import FloatingParticles from "@/components/FloatingParticles";
 import VisitUs from "@/components/VisitUs";
 import Footer from "@/components/Footer";
@@ -14,11 +13,7 @@ export default function Home() {
       {/* Hero: cinematic video slider */}
       <HeroSlider />
 
-      {/* Complete Extensive Cafe Menu Showcase */}
-      <FullMenu />
 
-      {/* Category showcases after hero */}
-      <CategoryShowcase />
 
       {/* Visit Us — map, hours, contact, socials */}
       <VisitUs />
