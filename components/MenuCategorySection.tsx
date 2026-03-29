@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { MenuCategory } from "@/data/menu";
 
 interface MenuCategorySectionProps {
@@ -10,11 +11,20 @@ interface MenuCategorySectionProps {
 }
 
 export default function MenuCategorySection({ category, index }: MenuCategorySectionProps) {
-  // Alternate layout: even index = images on left, text on right
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
   const isImageLeft = index % 2 === 0;
 
-  // Ensure we have enough images for a seamless long scroll (at least 6-8)
-  const baseImages = Array.from({ length: Math.max(1, Math.ceil(8 / category.images.length)) }, () => category.images).flat();
+  const nextImage = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1) % category.images.length);
+  }, [category.images.length]);
+
+  // Auto-cycle through images every 3.5 seconds
+  useEffect(() => {
+    if (isHovered) return;
+    const timer = setInterval(nextImage, 3500);
+    return () => clearInterval(timer);
+  }, [nextImage, isHovered]);
 
   return (
     <motion.section
@@ -26,50 +36,65 @@ export default function MenuCategorySection({ category, index }: MenuCategorySec
         isImageLeft ? "lg:flex-row" : "lg:flex-row-reverse"
       } gap-12 lg:gap-20 items-center`}
     >
-      {/* 1. IMAGE CONTAINER (MARQUEE) */}
-      <div className="w-full lg:w-1/2 overflow-hidden rounded-3xl relative shadow-[0_20px_50px_rgba(0,0,0,0.5)] h-[400px] md:h-[500px] border border-white/10 group bg-[#0a120a]">
+      {/* 1. IMAGE CONTAINER (FULL FRAME SLIDER) */}
+      <div 
+        className="w-full lg:w-1/2 overflow-hidden rounded-3xl relative shadow-[0_20px_50px_rgba(0,0,0,0.5)] h-[400px] md:h-[500px] border border-white/10 group bg-[#0a120a]"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
         {/* Subtle interior gradient overlay for depth */}
         <div className="absolute inset-0 z-10 pointer-events-none rounded-3xl"
              style={{ background: "radial-gradient(circle, transparent 40%, rgba(10, 18, 10, 0.7) 120%)" }}
         />
         
-        {/* Soft edge gradients to mask the scroll entering/leaving */}
-        <div className="absolute top-0 bottom-0 left-0 w-16 bg-gradient-to-r from-[#0a120a] to-transparent z-10 pointer-events-none" />
-        <div className="absolute top-0 bottom-0 right-0 w-16 bg-gradient-to-l from-[#0a120a] to-transparent z-10 pointer-events-none" />
+        {/* Slider Logic */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentIndex}
+            initial={{ opacity: 0, x: isImageLeft ? 20 : -20, scale: 1 }}
+            animate={{ opacity: 1, x: 0, scale: 1.05 }}
+            exit={{ opacity: 0, x: isImageLeft ? -20 : 20, scale: 1 }}
+            transition={{
+                duration: 1.0,
+                ease: "easeInOut",
+                scale: { duration: 3.5, ease: "linear" } // Continuous zoom-in per slide
+            }}
+            className="absolute inset-0 w-full h-full"
+          >
+            <Image 
+              src={category.images[currentIndex]} 
+              fill 
+              className="object-cover" 
+              alt={`${category.title} showcase photo`}
+              sizes="(max-width: 768px) 100vw, 50vw"
+              priority={currentIndex === 0}
+            />
+          </motion.div>
+        </AnimatePresence>
 
-        {/* Scrolling wrapper */}
-        <div className="flex h-full w-max animate-marquee hover:[animation-play-state:paused] items-center transition-all duration-500">
-          
-          {/* Half 1 */}
-          <div className="flex gap-4 md:gap-6 pr-4 md:pr-6 h-full py-6 pl-4 md:pl-6">
-            {baseImages.map((src, idx) => (
-              <div key={`h1-${idx}`} className="relative w-[240px] md:w-[280px] h-full rounded-2xl overflow-hidden shrink-0 border border-white/5 shadow-lg relative group/item">
-                <Image 
-                  src={src} 
-                  fill 
-                  className="object-cover transition-transform duration-[1.5s] ease-out group-hover/item:scale-110" 
-                  alt={`${category.title} sample ${idx}`}
-                  sizes="(max-width: 768px) 240px, 280px"
+        {/* Dot Indicators (Bottom Center) */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+            {category.images.map((_, idx) => (
+                <button
+                    key={idx}
+                    onClick={() => setCurrentIndex(idx)}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                        currentIndex === idx 
+                        ? "bg-[#d78a3a] w-6 shadow-[0_0_10px_rgba(215,138,58,0.5)]" 
+                        : "bg-white/30 hover:bg-white/50"
+                    }`}
+                    aria-label={`Go to slide ${idx + 1}`}
                 />
-              </div>
             ))}
-          </div>
+        </div>
 
-          {/* Half 2 (Exact Clone for seamless loop) */}
-          <div className="flex gap-4 md:gap-6 pr-4 md:pr-6 h-full py-6">
-            {baseImages.map((src, idx) => (
-              <div key={`h2-${idx}`} className="relative w-[240px] md:w-[280px] h-full rounded-2xl overflow-hidden shrink-0 border border-white/5 shadow-lg relative group/item">
-                <Image 
-                  src={src} 
-                  fill 
-                  className="object-cover transition-transform duration-[1.5s] ease-out group-hover/item:scale-110" 
-                  alt={`${category.title} sample ${idx}`}
-                  sizes="(max-width: 768px) 240px, 280px"
-                />
-              </div>
+        {/* Preload other images for instantaneous feel */}
+        <div className="hidden">
+            {category.images.map((src, idx) => (
+                idx !== currentIndex && (
+                    <Image key={idx} src={src} width={10} height={10} alt="preload" />
+                )
             ))}
-          </div>
-          
         </div>
       </div>
 
@@ -123,3 +148,4 @@ export default function MenuCategorySection({ category, index }: MenuCategorySec
     </motion.section>
   );
 }
+
