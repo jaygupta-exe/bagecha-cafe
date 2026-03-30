@@ -60,7 +60,7 @@ export default function AboutUs() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1763301331567-21c465b66e02?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnYXJkZW4lMjBjYWZlJTIwb3V0ZG9vciUyMHBsYW50c3xlbnwxfHx8fDE3NzQ2MTk1ODB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral')`,
+            backgroundImage: `url('/assests/about-hero.jpg')`,
             filter: 'blur(4px)',
             transform: 'scale(1.1)'
           }}
