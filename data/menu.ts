@@ -12,32 +12,6 @@ export interface MenuCategory {
   images: string[];
 }
 
-const CATEGORY_STYLES: Record<string, string> = {
-  pizza: "cheese melt, oregano, basil leaves, golden crust, mozzarella stretch",
-  "garlic-bread": "cheesy texture, herbs, toasted edges, melting butter",
-  pasta: "creamy sauce, herbs, plated elegantly, gourmet pasta bowl",
-  "grilled-wraps": "grilled tortilla, fresh greens, vibrant sauce, tightly rolled, diagonal cut",
-  munchies: "crispy texture, garnish, dipping sauce on side, elegant platter",
-  "hot-coffee": "latte art, steam, ceramic cup, creamy texture, professional espresso pull",
-  "cold-coffee": "condensation, ice cubes, tall glass, creamy texture, chilled coffee swirls",
-  "matcha-tea": "vibrant green, bamboo whisk texture, ceramic bowl, zen aesthetic, stone matcha",
-  sandwiches: "grilled bread, cheese melt, crispy texture, visible filling layers, gourmet sandwich stack",
-  burgers: "grilled bun, fresh lettuce, juicy veg patty, cheese slice, gourmet presentation, towering burger",
-  "french-fries": "crispy golden, sea salt, minimal plating, scattered herbs, rustic potato texture",
-  mocktails: "fresh mint, lime slices, ice cubes, condensation droplets, vibrant fruit garnish",
-};
-
-const generateVegetarianImage = (itemName: string, categoryId: string): string => {
-  const cleanName = itemName.replace(/[^a-zA-Z0-9 ]/g, "").replace(/\s+/g, "_");
-  const style = CATEGORY_STYLES[categoryId] || "premium gourmet presentation, fresh ingredients";
-  
-  // Base prompt with strict vegetarian constraints and consistent lighting/tones
-  const basePrompt = `Professional_food_photography_of_${cleanName},_vegetarian,_no_meat,_no_egg,_no_non-veg_ingredients.Premium_cafe_presentation,_cinematic_lighting,_soft_shadows,_shallow_depth_of_field,_dark_green_and_warm_tones,_highly_detailed,_realistic_textures,_4K_quality,_minimal_aesthetic,_modern_luxury_food_styling,_` + style.replace(/\s+/g, "_");
-  
-  // Fallback if specific prompt string might result in failures (encoded for safety)
-  return `https://image.pollinations.ai/prompt/${encodeURIComponent(basePrompt)}?width=800&height=800&nologo=true`;
-};
-
 const PIZZA_ITEMS: MenuItem[] = [
   { name: "Melted Bliss Margherita", price: "249" },
   { name: "Golden Cheese Corn Pizza", price: "269" },
@@ -129,83 +103,138 @@ export const MENU_DATA: MenuCategory[] = [
     title: "Pizza",
     subtitle: "Wood-fired & handcrafted to perfection",
     items: PIZZA_ITEMS,
-    images: PIZZA_ITEMS.slice(0, 5).map((item) => generateVegetarianImage(item.name, "pizza")),
+    images: [
+      "/assests/menu/pizza/Gooey%20Margherita%20pizza%20slice%20in%20focus.png",
+      "/assests/menu/pizza/Mouthwatering%20mushroom%20pizza%20slice.png",
+      "/assests/menu/pizza/ChatGPT%20Image%20Mar%2030,%202026,%2002_04_17%20PM.png",
+      "/assests/menu/pizza/ChatGPT%20Image%20Mar%2030,%202026,%2002_04_26%20PM.png",
+    ],
   },
   {
     id: "garlic-bread",
     title: "Garlic Bread",
     subtitle: "Warm, cheesy, and freshly baked",
     items: GARLIC_BREAD_ITEMS,
-    images: GARLIC_BREAD_ITEMS.slice(0, 5).map((item) => generateVegetarianImage(item.name, "garlic-bread")),
+    images: [
+      "/assests/menu/garlic%20bread/garlic%20bread%201.png",
+      "/assests/menu/garlic%20bread/garlic%20bread%202.png",
+    ],
   },
   {
     id: "pasta",
     title: "Pasta",
     subtitle: "Authentic Italian flavors in every bite",
     items: PASTA_ITEMS,
-    images: PASTA_ITEMS.slice(0, 5).map((item) => generateVegetarianImage(item.name, "pasta")),
+    images: [
+      "/assests/menu/pasta/pasta%201%20PM.jpeg",
+      "/assests/menu/pasta/pasta%2022%20PM.jpeg",
+      "/assests/menu/pasta/pasta%203PM.jpeg",
+    ],
   },
   {
     id: "grilled-wraps",
     title: "Grilled Wraps",
     subtitle: "Wholesome goodness, perfectly toasted",
     items: WRAP_ITEMS,
-    images: WRAP_ITEMS.slice(0, 5).map((item) => generateVegetarianImage(item.name, "grilled-wraps")),
+    images: [
+      "/assests/menu/grilled%20wraps/grilled%20wrap%201.jpeg",
+      "/assests/menu/grilled%20wraps/grilled%20wrap%202.jpeg",
+      "/assests/menu/grilled%20wraps/grilled%20wrap%203.jpeg",
+    ],
   },
   {
     id: "munchies",
     title: "Munchies",
     subtitle: "Crispy, savory bites for the soul",
     items: MUNCHIES_ITEMS,
-    images: MUNCHIES_ITEMS.slice(0, 5).map((item) => generateVegetarianImage(item.name, "munchies")),
+    images: [
+      "/assests/menu/munchies/munchies%201.jpeg",
+      "/assests/menu/munchies/munchies%202.jpeg",
+      "/assests/menu/munchies/munchies%203.jpeg",
+    ],
   },
   {
     id: "hot-coffee",
     title: "Hot Coffee",
     subtitle: "Expertly brewed for your comforting moments",
     items: HOT_COFFEE_ITEMS,
-    images: HOT_COFFEE_ITEMS.slice(0, 5).map((item) => generateVegetarianImage(item.name, "hot-coffee")),
+    images: [
+      "/assests/menu/hot%20coffee/hot%20coffee%201.png",
+      "/assests/menu/hot%20coffee/hot%20coffee%202.png",
+      "/assests/menu/hot%20coffee/hot%20coffee%203.png",
+      "/assests/menu/hot%20coffee/hot%20coffee%204.png",
+    ],
   },
   {
     id: "cold-coffee",
     title: "Cold Coffee",
     subtitle: "Chilled perfection to beat the heat",
     items: COLD_COFFEE_ITEMS,
-    images: COLD_COFFEE_ITEMS.slice(0, 5).map((item) => generateVegetarianImage(item.name, "cold-coffee")),
+    images: [
+      "/assests/menu/cold%20coffee/cold%20coffee%201.jpeg",
+      "/assests/menu/cold%20coffee/cold%20cofee%202.jpeg",
+      "/assests/menu/cold%20coffee/cold%20cofee%203.jpeg",
+      "/assests/menu/cold%20coffee/cold%20coffee%204.jpeg",
+    ],
   },
   {
     id: "matcha-tea",
     title: "Matcha & Tea",
     subtitle: "Zen in a cup, crafted for wellness",
     items: MATCHA_TEA_ITEMS,
-    images: MATCHA_TEA_ITEMS.slice(0, 5).map((item) => generateVegetarianImage(item.name, "matcha-tea")),
+    images: [
+      "/assests/menu/matcha/matcha%201.png",
+      "/assests/menu/matcha/matcha%202.png",
+      "/assests/menu/matcha/matcha%203,.png",
+      "/assests/menu/matcha/matcha%204.png",
+    ],
   },
   {
     id: "sandwiches",
     title: "Sandwiches",
     subtitle: "Gourmet layers stacked with fresh flavor",
     items: SANDWICH_ITEMS,
-    images: SANDWICH_ITEMS.slice(0, 5).map((item) => generateVegetarianImage(item.name, "sandwiches")),
+    images: [
+      "/assests/menu/sandwich/sandwich%201.jpeg",
+      "/assests/menu/sandwich/sandwich%202.jpeg",
+      "/assests/menu/sandwich/sandwich%203.jpeg",
+      "/assests/menu/sandwich/sandwich%204.jpeg",
+      "/assests/menu/sandwich/sandwich%205.jpeg",
+    ],
   },
   {
     id: "burgers",
     title: "Burgers",
     subtitle: "Juicy, towering, and absolutely delicious",
     items: BURGERS_ITEMS,
-    images: BURGERS_ITEMS.slice(0, 5).map((item) => generateVegetarianImage(item.name, "burgers")),
+    images: [
+      "/assests/menu/burger/burger%201.png",
+      "/assests/menu/burger/burger%202.png",
+      "/assests/menu/burger/burger%203.png",
+      "/assests/menu/burger/burger%204.png",
+    ],
   },
   {
     id: "french-fries",
     title: "French Fries",
     subtitle: "Golden, crispy, and universally loved",
     items: FRIES_ITEMS,
-    images: FRIES_ITEMS.slice(0, 5).map((item) => generateVegetarianImage(item.name, "french-fries")),
+    images: [
+      "/assests/menu/french%20fries/french%20fries%201.jpeg",
+      "/assests/menu/french%20fries/french%20fries%202.jpeg",
+      "/assests/menu/french%20fries/french%20fries%203.jpeg",
+    ],
   },
   {
     id: "mocktails",
     title: "Mocktails",
     subtitle: "Vibrant, refreshing, and endlessly tropical",
     items: MOCKTAILS_ITEMS,
-    images: MOCKTAILS_ITEMS.slice(0, 5).map((item) => generateVegetarianImage(item.name, "mocktails")),
+    images: [
+      "/assests/menu/mocktail/mocktail%20%201.jpeg",
+      "/assests/menu/mocktail/mocktail%202.jpeg",
+      "/assests/menu/mocktail/mocktail%203.jpeg",
+      "/assests/menu/mocktail/mocktail%204.jpeg",
+    ],
   },
 ];
