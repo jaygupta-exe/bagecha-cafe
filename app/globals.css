@@ -478,9 +478,10 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: scale(1.08); /* Cropping to hide watermarks/logos */
   transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .founder-carousel-container:hover .founder-carousel-slide img {
-  transform: scale(1.03);
+  transform: scale(1.12);
 }
