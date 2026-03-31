@@ -8,15 +8,14 @@ import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "Menu", href: "/menu" },
-  { name: "Locations", href: "/#locations" },
   { name: "About Us", href: "/about" },
+  { name: "Menu", href: "/menu" },
+  { name: "Location", href: "/location" },
 ];
 
 export default function Navbar() {
   const pathname = usePathname();
-  const [active, setActive] = useState("Home");
+  const [active, setActive] = useState("About Us");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Sync active state with pathname
