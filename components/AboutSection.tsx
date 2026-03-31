@@ -38,7 +38,7 @@ export default function AboutSection() {
               className="text-4xl md:text-6xl font-bold mb-8 text-white tracking-tight"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
-              Bagecha by Adis Café
+              Bagecha by Adis
             </h2>
 
             <div className="space-y-6 text-lg md:text-xl text-white/80 max-w-3xl leading-relaxed font-light">
