@@ -43,13 +43,25 @@ export default function AboutUs() {
     }
   ];
 
-  const galleryImages = [
-    'https://images.unsplash.com/photo-1763301331567-21c465b66e02?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnYXJkZW4lMjBjYWZlJTIwb3V0ZG9vciUyMHBsYW50c3xlbnwxfHx8fDE3NzQ2MTk1ODB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    'https://images.unsplash.com/photo-1758980960366-d344cfddd004?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYWZlJTIwaW50ZXJpb3IlMjBwbGFudHMlMjBjb3p5fGVufDF8fHx8MTc3NDYxOTU4MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    'https://images.unsplash.com/photo-1541167760496-1628856ab772?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBsYXR0ZSUyMGFydHxlbnwxfHx8fDE3NzQ2MTg2MjV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    'https://images.unsplash.com/photo-1684595011788-d7ac732cd6e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYWZlJTIwZm9vZCUyMGFlc3RoZXRpY3xlbnwxfHx8fDE3NzQ2MTk1ODF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    'https://images.unsplash.com/photo-1766443775333-3e75fae0a82f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXN0YXVyYW50JTIwbGlnaHRzJTIwYW1iaWFuY2V8ZW58MXx8fHwxNzc0NjE5NTgxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    'https://images.unsplash.com/photo-1710948410781-d5ba35329a1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxib3RhbmljYWwlMjBnYXJkZW4lMjBuYXR1cmV8ZW58MXx8fHwxNzc0NTk0MjY4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+  const galleryRow1 = [
+    '/assests/about%20us%20caraousel/image%201.jpeg',
+    '/assests/about%20us%20caraousel/image%202.jpeg',
+    '/assests/about%20us%20caraousel/image%203.jpeg',
+    '/assests/about%20us%20caraousel/image%204.jpeg',
+    '/assests/about%20us%20caraousel/image%205.jpeg',
+    '/assests/about%20us%20caraousel/image%206.jpeg',
+    '/assests/about%20us%20caraousel/image%207.jpeg',
+    '/assests/about%20us%20caraousel/image%208.jpeg',
+  ];
+
+  const galleryRow2 = [
+    '/assests/about%20us%20caraousel/image%209.jpeg',
+    '/assests/about%20us%20caraousel/image%2010.jpeg',
+    '/assests/about%20us%20caraousel/image%2011.jpeg',
+    '/assests/about%20us%20caraousel/image%2012.jpeg',
+    '/assests/about%20us%20caraousel/image%2013.jpeg',
+    '/assests/about%20us%20caraousel/image%2014.jpeg',
+    '/assests/about%20us%20caraousel/image%2015.jpeg',
   ];
 
   return (
@@ -333,7 +345,7 @@ export default function AboutUs() {
         
         <div className="relative z-10">
           <motion.div
-            className="text-center mb-12 px-6"
+            className="text-center mb-16 px-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -353,28 +365,60 @@ export default function AboutUs() {
             <p className="text-lg text-gray-400">Moments captured in our garden paradise</p>
           </motion.div>
 
-          <div className="flex overflow-x-auto gap-6 px-6 pb-6 scrollbar-hide" style={{ scrollbarWidth: 'none' }}>
-            {galleryImages.map((image, index) => (
-              <motion.div
-                key={index}
-                className="flex-shrink-0 w-80 h-96 rounded-2xl overflow-hidden relative group cursor-pointer"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ scale: 1.05, zIndex: 10 }}
-              >
-                <img 
-                  src={image} 
-                  alt={`Gallery ${index + 1}`}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#364c11]/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
-                
-                {/* Overlay Border Effect */}
-                <div className="absolute inset-0 border-2 border-[#d4af37]/0 group-hover:border-[#d4af37]/50 transition-all duration-300 rounded-2xl" />
-              </motion.div>
-            ))}
+          {/* Row 1 - scrolls left */}
+          <div className="relative mb-5 overflow-hidden">
+            {/* Left fade */}
+            <div className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none" style={{ background: 'linear-gradient(to right, #000, transparent)' }} />
+            {/* Right fade */}
+            <div className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none" style={{ background: 'linear-gradient(to left, #000, transparent)' }} />
+            
+            <div className="about-marquee-row">
+              <div className="about-marquee-track about-marquee-left">
+                {[...galleryRow1, ...galleryRow1].map((image, index) => (
+                  <div
+                    key={index}
+                    className="about-gallery-card group"
+                  >
+                    <img 
+                      src={image} 
+                      alt={`Bagecha Gallery ${(index % galleryRow1.length) + 1}`}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#364c11]/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="absolute inset-0 border-2 border-[#d4af37]/0 group-hover:border-[#d4af37]/40 transition-all duration-300 rounded-xl" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Row 2 - scrolls right */}
+          <div className="relative overflow-hidden">
+            {/* Left fade */}
+            <div className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none" style={{ background: 'linear-gradient(to right, #000, transparent)' }} />
+            {/* Right fade */}
+            <div className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none" style={{ background: 'linear-gradient(to left, #000, transparent)' }} />
+            
+            <div className="about-marquee-row">
+              <div className="about-marquee-track about-marquee-right">
+                {[...galleryRow2, ...galleryRow2].map((image, index) => (
+                  <div
+                    key={index}
+                    className="about-gallery-card group"
+                  >
+                    <img 
+                      src={image} 
+                      alt={`Bagecha Gallery ${(index % galleryRow2.length) + 9}`}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#364c11]/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="absolute inset-0 border-2 border-[#d4af37]/0 group-hover:border-[#d4af37]/40 transition-all duration-300 rounded-xl" />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
