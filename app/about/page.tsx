@@ -60,8 +60,8 @@ export default function AboutUs() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('/assests/about-hero.jpg')`,
-            filter: 'blur(4px)',
+            backgroundImage: `url('/assests/about-hero.jpg?v=${Date.now()}')`,
+            filter: 'blur(3px)',
             transform: 'scale(1.1)'
           }}
         />
@@ -70,7 +70,7 @@ export default function AboutUs() {
         <div 
           className="absolute inset-0" 
           style={{
-            background: `linear-gradient(to bottom, rgba(54, 76, 17, 0.85), rgba(0, 0, 0, 0.9))`
+            background: `linear-gradient(to bottom, rgba(54, 76, 17, 0.6), rgba(0, 0, 0, 0.8))`
           }}
         />
 
