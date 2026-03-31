@@ -275,6 +275,32 @@ export default function AboutUs() {
         </div>
       </section>
 
+      {/* Brand Heading Section */}
+      <section className="relative pt-20 pb-10 px-6 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 
+            style={{ 
+              fontFamily: 'var(--font-playfair)',
+              fontSize: 'clamp(2.5rem, 8vw, 6rem)',
+              fontWeight: 700,
+              background: 'linear-gradient(to right, #ffffff, #d4af37)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              lineHeight: 1.2
+            }}
+          >
+            Bagecha by Adis
+          </h2>
+          <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-[#d4af37] to-transparent mx-auto mt-6"></div>
+        </motion.div>
+      </section>
+
       {/* About Text Section */}
       <section className="relative py-24 px-6">
         <div className="absolute inset-0 bg-gradient-to-b from-black to-[#0a0f05]" />
