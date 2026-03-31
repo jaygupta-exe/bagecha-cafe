@@ -19,10 +19,10 @@ export default function MenuCategorySection({ category, index }: MenuCategorySec
     setCurrentIndex((prev) => (prev + 1) % category.images.length);
   }, [category.images.length]);
 
-  // Auto-cycle through images every 3.5 seconds
+  // Auto-cycle through images every 2 seconds
   useEffect(() => {
     if (isHovered) return;
-    const timer = setInterval(nextImage, 3500);
+    const timer = setInterval(nextImage, 2000);
     return () => clearInterval(timer);
   }, [nextImage, isHovered]);
 
@@ -47,17 +47,16 @@ export default function MenuCategorySection({ category, index }: MenuCategorySec
              style={{ background: "radial-gradient(circle, transparent 40%, rgba(10, 18, 10, 0.7) 120%)" }}
         />
         
-        {/* Slider Logic */}
-        <AnimatePresence mode="wait">
+        {/* Slider Logic - Cross-fading for instant response */}
+        <AnimatePresence initial={false}>
           <motion.div
             key={currentIndex}
-            initial={{ opacity: 0, x: isImageLeft ? 20 : -20, scale: 1 }}
-            animate={{ opacity: 1, x: 0, scale: 1.05 }}
-            exit={{ opacity: 0, x: isImageLeft ? -20 : 20, scale: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{
-                duration: 1.0,
+                duration: 0.6,
                 ease: "easeInOut",
-                scale: { duration: 3.5, ease: "linear" } // Continuous zoom-in per slide
             }}
             className="absolute inset-0 w-full h-full"
           >
@@ -67,7 +66,7 @@ export default function MenuCategorySection({ category, index }: MenuCategorySec
               className="object-cover" 
               alt={`${category.title} showcase photo`}
               sizes="(max-width: 768px) 100vw, 50vw"
-              priority={currentIndex === 0}
+              priority={currentIndex === 0 || currentIndex === 1}
             />
           </motion.div>
         </AnimatePresence>
@@ -88,12 +87,10 @@ export default function MenuCategorySection({ category, index }: MenuCategorySec
             ))}
         </div>
 
-        {/* Preload other images for instantaneous feel */}
+        {/* Improved preloading for nearby images */}
         <div className="hidden">
             {category.images.map((src, idx) => (
-                idx !== currentIndex && (
-                    <Image key={idx} src={src} width={10} height={10} alt="preload" />
-                )
+                <Image key={idx} src={src} width={100} height={100} alt="preload" priority={false} />
             ))}
         </div>
       </div>
