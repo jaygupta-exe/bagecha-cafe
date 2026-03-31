@@ -62,13 +62,13 @@ export default function Navbar() {
 
         {/* Right: CTA Button */}
         <div className="flex items-center">
-          <Link
-            href="#book"
+          <a
+            href="tel:+918360032762"
             className="bg-[#364c11] text-white px-5 py-2.5 md:px-6 md:py-3 rounded-full text-xs md:text-sm tracking-wider font-semibold transition-transform hover:scale-105 shadow-md"
             style={{ fontFamily: 'var(--font-inter)' }}
           >
             BOOK A TABLE
-          </Link>
+          </a>
 
           {/* Mobile Menu Toggle (hidden on desktop) */}
           <button className="md:hidden ml-4 p-2 text-[#2b2b2b]">
