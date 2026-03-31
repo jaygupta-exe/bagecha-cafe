@@ -23,10 +23,10 @@ const slides = [
   },
   {
     id: 3,
-    label: "Refreshing Sips",
-    title: "Virgin Mint Mojito",
-    subtitle: "Fresh. Cool. Elevated.",
-    cta: "Discover Drinks",
+    label: "Artisan Pizza",
+    title: "Margherita Pizza",
+    subtitle: "Classic, cheesy, wood-fired perfection.",
+    cta: "Order Now",
     video: "/assests/second final.mp4"
   }
 ];
