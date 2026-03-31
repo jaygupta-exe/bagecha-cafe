@@ -117,7 +117,7 @@ export default function AboutUs() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            About Bagecha
+            Bagecha by Adis
           </motion.h1>
           
           <motion.p 
@@ -447,20 +447,20 @@ export default function AboutUs() {
                     <p>
                       My journey in the food industry began in{' '}
                       <span className="text-[#d4af37] font-medium">2018</span>{' '}
-                      when I moved to Chandigarh to explore diverse cuisines and deepen my understanding of culinary arts. I pursued{' '}
-                      <span className="text-white font-medium">Restaurant & Catering Management (RCM)</span>{' '}
+                      when I moved to <span className="text-[#d4af37] font-medium">Chandigarh</span> to explore diverse cuisines and deepen my understanding of culinary arts. I pursued{' '}
+                      <span className="text-[#d4af37] font-medium">Restaurant & Catering Management (RCM)</span>{' '}
                       and gained hands-on experience working with well-known franchises such as Amritsari Galli, Hawkers Centre, and Chaat Roma.
                     </p>
 
                     <p>
                       Driven by passion and creativity, I eventually launched my own café in Chandigarh. During the COVID period, I further expanded my expertise by moving to Bangalore, where I worked as a{' '}
-                      <span className="text-white font-medium">Continental Chef at JW Marriott, Whitefield</span>, gaining valuable exposure in fine dining and global cuisines.
+                      <span className="text-[#d4af37] font-medium">Continental Chef at JW Marriott, Whitefield</span>, gaining valuable exposure in fine dining and global cuisines.
                     </p>
 
                     <p>
                       With growing experience and vision, I scaled my brand from Jalandhar and expanded to{' '}
                       <span className="text-[#d4af37]">Rishikesh</span>. Today, Adis Cafe continues to grow, and we are excited to announce plans for a{' '}
-                      <span className="text-white font-medium">new outlet in Chandigarh</span>{' '}
+                      <span className="text-[#d4af37] font-medium">new outlet in Chandigarh</span>{' '}
                       soon.
                     </p>
                   </div>

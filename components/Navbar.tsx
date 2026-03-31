@@ -36,13 +36,13 @@ export default function Navbar() {
       >
         {/* Left: Logo */}
         <Link href="/" className="flex items-center gap-3">
-          <div className="relative w-10 h-10 md:w-14 md:h-14 rounded-full overflow-hidden bg-[#2b3a0e]/10 p-1 border border-white/20">
+          <div className="relative w-12 h-12 md:w-20 md:h-20">
             <Image
               src="/logo.png"
               alt="Logo"
               fill
-              className="object-contain p-1"
-              sizes="56px"
+              className="object-contain"
+              sizes="80px"
               priority
             />
           </div>
