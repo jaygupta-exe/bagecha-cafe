@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { Sparkles, Coffee, Store, Leaf, MapPin, ChevronRight } from 'lucide-react';
+import { Sparkles, Coffee, Store, Leaf, MapPin, ChevronRight, User, Quote } from 'lucide-react';
 import Footer from '@/components/Footer';
 
 export default function AboutUs() {
@@ -337,6 +337,149 @@ export default function AboutUs() {
             </div>
           </div>
         </motion.div>
+      </section>
+
+      {/* About Founder Section */}
+      <section className="relative py-24 px-6 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f05] via-black to-[#0a0f05]" />
+        
+        {/* Decorative background glow */}
+        <div 
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] pointer-events-none"
+          style={{
+            background: 'radial-gradient(circle, rgba(54, 76, 17, 0.15) 0%, transparent 70%)'
+          }}
+        />
+
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <User className="w-10 h-10 mx-auto mb-4 text-[#d4af37]" strokeWidth={1.5} />
+            <h2 
+              className="mb-4"
+              style={{ 
+                fontFamily: 'var(--font-playfair)',
+                fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+                fontWeight: 700,
+                color: '#d4af37'
+              }}
+            >
+              Meet the Founder
+            </h2>
+            <p className="text-lg text-gray-400">The visionary behind Bagecha</p>
+          </motion.div>
+
+          <motion.div
+            className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            {/* Founder Image Carousel */}
+            <div className="w-full lg:w-5/12 flex-shrink-0">
+              <div className="founder-carousel-container">
+                <div className="founder-carousel-track">
+                  <div className="founder-carousel-slide">
+                    <img 
+                      src="/assests/founder%20photo/founder%20photo%201.png" 
+                      alt="Aditya Sharma - Founder of Adis Cafe" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="founder-carousel-slide">
+                    <img 
+                      src="/assests/founder%20photo/founder%20photo%202.png" 
+                      alt="Aditya Sharma - Founder of Adis Cafe" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                {/* Scroll indicator dots */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                  <div className="w-2 h-2 rounded-full bg-[#d4af37]/80" />
+                  <div className="w-2 h-2 rounded-full bg-white/30" />
+                </div>
+              </div>
+            </div>
+
+            {/* Founder Bio */}
+            <div className="w-full lg:w-7/12">
+              <div 
+                className="p-8 md:p-10 rounded-3xl backdrop-blur-xl border border-[#364c11]/30 relative overflow-hidden"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(54, 76, 17, 0.1), rgba(0, 0, 0, 0.6))',
+                  boxShadow: '0 16px 48px rgba(0, 0, 0, 0.4), inset 0 0 60px rgba(54, 76, 17, 0.08)'
+                }}
+              >
+                {/* Corner decorations */}
+                <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-[#d4af37]/10 to-transparent rounded-bl-full" />
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-[#364c11]/15 to-transparent rounded-tr-full" />
+                
+                <div className="relative z-10">
+                  {/* Quote icon */}
+                  <Quote className="w-8 h-8 text-[#d4af37]/40 mb-4" strokeWidth={1.5} />
+                  
+                  <h3 
+                    className="mb-2"
+                    style={{ 
+                      fontFamily: 'var(--font-playfair)',
+                      fontSize: 'clamp(1.8rem, 3vw, 2.5rem)',
+                      fontWeight: 700,
+                      background: 'linear-gradient(to right, #ffffff, #d4af37)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text'
+                    }}
+                  >
+                    Aditya Sharma
+                  </h3>
+                  <p className="text-[#d4af37] text-sm tracking-[0.2em] uppercase mb-6" style={{ fontFamily: 'var(--font-inter)' }}>
+                    Founder & Head Chef
+                  </p>
+
+                  <div className="space-y-4 text-gray-300 leading-relaxed" style={{ fontFamily: 'var(--font-inter)' }}>
+                    <p>
+                      My journey in the food industry began in{' '}
+                      <span className="text-[#d4af37] font-medium">2018</span>{' '}
+                      when I moved to Chandigarh to explore diverse cuisines and deepen my understanding of culinary arts. I pursued{' '}
+                      <span className="text-white font-medium">Restaurant & Catering Management (RCM)</span>{' '}
+                      and gained hands-on experience working with well-known franchises such as Amritsari Galli, Hawkers Centre, and Chaat Roma.
+                    </p>
+
+                    <p>
+                      Driven by passion and creativity, I eventually launched my own café in Chandigarh. During the COVID period, I further expanded my expertise by moving to Bangalore, where I worked as a{' '}
+                      <span className="text-white font-medium">Continental Chef at JW Marriott, Whitefield</span>, gaining valuable exposure in fine dining and global cuisines.
+                    </p>
+
+                    <p>
+                      With growing experience and vision, I scaled my brand from Jalandhar and expanded to{' '}
+                      <span className="text-[#d4af37]">Rishikesh</span>. Today, Adis Cafe continues to grow, and we are excited to announce plans for a{' '}
+                      <span className="text-white font-medium">new outlet in Chandigarh</span>{' '}
+                      soon.
+                    </p>
+                  </div>
+
+                  {/* Signature line */}
+                  <div className="mt-8 pt-6 border-t border-[#364c11]/30 flex items-center gap-4">
+                    <div className="w-10 h-[2px] bg-gradient-to-r from-[#d4af37] to-transparent" />
+                    <p 
+                      className="text-[#d4af37]/70 italic"
+                      style={{ fontFamily: 'var(--font-playfair)', fontSize: '1.1rem' }}
+                    >
+                      — Aditya Sharma
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </section>
 
       {/* Visual Gallery Strip */}
