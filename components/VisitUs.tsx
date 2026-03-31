@@ -278,7 +278,7 @@ export default function VisitUs() {
                 </p>
                 <div className="flex gap-4">
                   <a
-                    href="https://www.instagram.com/bagecha_jalandhar/"
+                    href="https://www.instagram.com/bagecha_by_adiscafe?igsh=NnJ2cGtiYTBlbzA3"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="visit-social-icon"
