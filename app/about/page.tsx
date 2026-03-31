@@ -612,8 +612,11 @@ export default function AboutUs() {
             Step into a world where every corner tells a story, every dish is crafted with love, and every moment becomes a cherished memory.
           </p>
           
-          <motion.button
-            className="group relative px-10 py-5 rounded-full overflow-hidden transition-all duration-300 text-lg"
+          <motion.a
+            href="https://www.google.com/maps/place/Bagecha,+Bagecha,+Doaba+Chowk,+Near+Doaba+Chowk,+Vikas+Puri,+Santokh+Pura,+Jalandhar,+Punjab+144008/data=!4m2!3m1!1s0x391a5b4a610e3df1:0xaefe7c7cf872e909"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative inline-flex px-10 py-5 rounded-full overflow-hidden transition-all duration-300 text-lg"
             style={{
               background: 'linear-gradient(135deg, #d4af37, #c9a030)',
               boxShadow: '0 15px 40px rgba(212, 175, 55, 0.4), 0 0 60px rgba(212, 175, 55, 0.2)',
@@ -635,7 +638,7 @@ export default function AboutUs() {
               whileHover={{ x: '200%' }}
               transition={{ duration: 0.8 }}
             />
-          </motion.button>
+          </motion.a>
 
           {/* Decorative Elements */}
           <div className="mt-16 flex justify-center gap-6 md:gap-12 flex-wrap text-gray-500">
