@@ -456,6 +456,7 @@ body {
 
 .founder-carousel-track {
   display: flex;
+  gap: 0; /* No space between slides */
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
@@ -470,8 +471,10 @@ body {
 .founder-carousel-slide {
   flex-shrink: 0;
   width: 100%;
+  min-width: 100%; /* Force full width to prevent peeking */
   aspect-ratio: 3 / 4;
   scroll-snap-align: start;
+  overflow: hidden;
 }
 
 .founder-carousel-slide img {
