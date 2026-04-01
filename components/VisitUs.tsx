@@ -281,10 +281,14 @@ export default function VisitUs() {
                     href="https://www.instagram.com/bagecha_by_adiscafe?igsh=NnJ2cGtiYTBlbzA3"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="visit-social-icon"
+                    className="flex items-center gap-3 px-4 py-2 mt-2 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 transition-colors group"
+                    style={{ fontFamily: "var(--font-inter)" }}
                     aria-label="Instagram"
                   >
-                    <InstagramIcon />
+                    <div className="text-white/80 group-hover:text-white transition-colors">
+                      <InstagramIcon />
+                    </div>
+                    <span className="text-sm tracking-wide text-white/80 group-hover:text-white transition-colors font-medium">bagecha by adis</span>
                   </a>
                 </div>
               </div>

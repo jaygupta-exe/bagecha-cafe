@@ -413,7 +413,7 @@ export default function AboutUs() {
                 <div className="founder-carousel-track">
                   <div className="founder-carousel-slide">
                     <img 
-                      src="/assests/founder%20photo/founder%20photo%201.png" 
+                      src="/assests/founder%20photo/image%203.jpeg" 
                       alt="Aditya Sharma - Founder of Adis Cafe" 
                       className="w-full h-full object-cover"
                     />

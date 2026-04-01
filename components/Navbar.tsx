@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
@@ -17,6 +17,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const [active, setActive] = useState("About Us");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showContactOptions, setShowContactOptions] = useState(false);
 
   // Sync active state with pathname
   useEffect(() => {
@@ -71,21 +72,58 @@ export default function Navbar() {
         </nav>
 
         {/* Right: CTA Button */}
-        <div className="flex items-center">
-          <a
-            href="tel:+918360032762"
+        <div className="flex items-center relative">
+          <button
+            onClick={() => setShowContactOptions(!showContactOptions)}
             className="bg-[#364c11] text-white px-5 py-2.5 md:px-6 md:py-3 rounded-full text-xs md:text-sm tracking-wider font-semibold transition-transform hover:scale-105 shadow-md flex items-center gap-2"
             style={{ fontFamily: 'var(--font-inter)' }}
           >
             <Phone className="w-3 h-3 md:w-4 md:h-4" />
             <span className="hidden xs:inline">BOOK A TABLE</span>
             <span className="xs:hidden">BOOK</span>
-          </a>
+          </button>
+
+          <AnimatePresence>
+            {showContactOptions && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95, y: 10 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95, y: 10 }}
+                className="absolute top-full right-0 mt-3 w-48 p-2 rounded-2xl shadow-xl border border-white/20 z-50 overflow-hidden"
+                style={{
+                  background: "linear-gradient(135deg, rgba(162, 172, 142, 0.98) 0%, rgba(182, 189, 159, 0.98) 100%)",
+                  backdropFilter: "blur(15px)",
+                  WebkitBackdropFilter: "blur(15px)",
+                }}
+              >
+                <div className="flex flex-col gap-1 pointer-events-auto">
+                  <a
+                    href="tel:+918360032762"
+                    className="flex items-center gap-3 px-4 py-3 text-[#2b2b2b] hover:bg-white/30 rounded-xl transition-colors font-medium text-sm"
+                    style={{ fontFamily: 'var(--font-inter)' }}
+                  >
+                    <Phone className="w-4 h-4 text-[#364c11]" />
+                    Call Us
+                  </a>
+                  <a
+                    href="https://wa.me/918360032762"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 px-4 py-3 text-[#2b2b2b] hover:bg-white/30 rounded-xl transition-colors font-medium text-sm"
+                    style={{ fontFamily: 'var(--font-inter)' }}
+                  >
+                    <MessageCircle className="w-4 h-4 text-[#364c11]" />
+                    WhatsApp
+                  </a>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
 
           {/* Mobile Menu Toggle */}
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden ml-4 p-2 text-[#2b2b2b] hover:bg-black/5 rounded-full transition-colors"
+            className="md:hidden ml-4 p-2 text-[#2b2b2b] hover:bg-black/5 rounded-full transition-colors pointer-events-auto"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
