@@ -8,38 +8,38 @@ export default function AboutUs() {
   const milestones = [
     {
       year: '2019',
-      title: 'Adis Delicious & Aromatic',
+      title: 'Our First Café',
       location: 'Chandigarh',
       icon: Coffee,
-      description: 'Our journey began with unique flavors and warm hospitality'
+      description: 'Embarked on our inaugural venture in Chandigarh, a bold new experience that flourished beyond expectations.'
     },
     {
       year: '2020',
-      title: 'Adis Cafeteria',
-      location: 'Mohali',
+      title: 'University Expansion',
+      location: 'Chandigarh University',
       icon: Store,
-      description: 'Expanding to bring our experience to more communities'
+      description: 'Expanded our reach to Chandigarh University; later shifted operations to Jalandhar due to the COVID-19 pandemic.'
     },
     {
-      year: '2021',
-      title: 'Adis Café',
-      location: 'Jalandhar',
+      year: '2022',
+      title: 'Fresh Start in Jalandhar',
+      location: 'Takeaway Outlet',
       icon: Coffee,
-      description: 'Moving forward even during challenging times'
+      description: 'Relaunched as a takeaway outlet, which quickly evolved into a cozy café space for our growing community.'
     },
     {
       year: '2023',
-      title: 'Adis Café N Dine',
-      location: 'Jalandhar',
+      title: 'Grand Expansion',
+      location: 'Flagship Café',
       icon: Store,
-      description: 'Growing stronger with customer support'
+      description: 'Driven by an overwhelming response, we opened our signature café with 60+ seating capacity and premium comfort.'
     },
     {
       year: '2026',
-      title: 'Bagecha by Adis Café',
-      location: 'Garden Theme Launch',
+      title: 'Nature Sanctuary',
+      location: 'Bagecha Launch',
       icon: Leaf,
-      description: 'Where nature meets comfort'
+      description: 'Unveiled our nature-inspired sanctuary—a comforting café with plant-lined water seating and authentic continental cuisine.'
     }
   ];
 
@@ -338,21 +338,23 @@ export default function AboutUs() {
                 </p>
 
                 <p>
-                  Our journey began in <span className="text-[#d4af37]">2019 in Chandigarh</span> with our first outlet, Adis Delicious & Aromatic, where we introduced our unique flavors and warm hospitality. The overwhelming response encouraged us to expand, and in 2020, we launched our second outlet, Adis Cafeteria in Mohali.
+                  Our journey began in <span className="text-[#d4af37]">2019 in Chandigarh</span>, where we launched our first café to embrace a bold new experience. The venture was a resounding success, proving our commitment to quality and service from the very start.
                 </p>
 
                 <p>
-                  Even during the challenging times of 2021, we continued to move forward by opening a small café in Jalandhar under the name Adis Café. With dedication and support from our customers, we grew stronger and transformed it into a larger space — Adis Café N Dine in 2023.
+                  In <span className="text-[#d4af37]">2020</span>, we expanded to Chandigarh University. However, due to the COVID-19 pandemic, we made the strategic decision to shift our business to Jalandhar to ensure resilience and continued growth.
                 </p>
 
                 <p>
-                  With the constant love and blessings of our customers, we took a step ahead in 2026 and introduced{' '}
+                  By <span className="text-[#d4af37]">2022</span>, we freshly started in Jalandhar as a takeaway outlet, which soon expanded into a charming small café. Following an incredible response, <span className="text-[#d4af37]">2023</span> marked the opening of our large-scale café with a 60+ seating capacity and premium interiors.
+                </p>
+
+                <p>
+                  In <span className="text-[#d4af37]">2026</span>, we took a leap forward and introduced{' '}
                   <span className="text-[#d4af37] font-semibold" style={{ fontFamily: 'var(--font-playfair)' }}>
                     Bagecha by Adis Café
                   </span>
-                  {' '}— a beautifully designed{' '}
-                  <span className="text-white font-medium">garden-themed café</span>
-                  {' '}where nature meets comfort.
+                  {' '}— a nature-comforting oasis featuring indoor plants, water seating, and authentic continental cuisine, where every cup of coffee comes with a breath of fresh air.
                 </p>
 
                 <p className="text-center pt-4 border-t border-[#364c11]/30">
@@ -479,7 +481,7 @@ export default function AboutUs() {
                     </p>
 
                     <p>
-                      Driven by passion and creativity, I eventually launched my own café in Chandigarh. During the COVID period, I further expanded my expertise by moving to Bangalore, where I worked as a{' '}
+                      Driven by passion and creativity, I launched my first café in Chandigarh in 2019. During the COVID period, I further expanded my expertise by moving to Bangalore, where I worked as a{' '}
                       <span className="text-[#d4af37] font-medium">Continental Chef at JW Marriott, Whitefield</span>, gaining valuable exposure in fine dining and global cuisines.
                     </p>
 
