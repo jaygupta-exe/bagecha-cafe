@@ -34,10 +34,10 @@ def process_logo():
     # linear interpolation: 100 -> 255, 180 -> 0
     alpha[mask] = 255.0 - ((gray[mask] - 100.0) / 80.0) * 255.0
     
-    # The new color should be cream: #F5E6D3 -> rgb(245, 230, 211)
-    new_r = np.full_like(r, 245)
-    new_g = np.full_like(g, 230)
-    new_b = np.full_like(b, 211)
+    # The new color should be black: #000000 -> rgb(0, 0, 0)
+    new_r = np.full_like(r, 0)
+    new_g = np.full_like(g, 0)
+    new_b = np.full_like(b, 0)
     
     # Ensure we don't increase alpha where the original image was already transparent 
     # (just in case the original had some real transparency)
