@@ -24,11 +24,21 @@ export const metadata: Metadata = {
   keywords: ["Bagecha", "Adi's Cafe", "premium cafe", "coffee", "pizza", "gourmet food", "luxury dining"],
   icons: {
     icon: [
-      { url: "/logo.png", sizes: "32x32" },
-      { url: "/logo.png", sizes: "16x16" },
+      { url: "/logo.png", sizes: "32x32", type: "image/png" },
+      { url: "/logo.png", sizes: "16x16", type: "image/png" },
+      { url: "/icon.png", sizes: "192x192", type: "image/png" },
     ],
-    apple: "/logo.png",
+    apple: [
+      { url: "/logo.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      {
+        rel: "apple-touch-icon-precomposed",
+        url: "/logo.png",
+      },
+    ],
   },
+  manifest: "/manifest.json",
   openGraph: {
     title: "Bagecha by Adi's Cafe — Crafted Taste, Premium Experience",
     description: "Experience the finest in pizza, coffee, shakes, and more.",
