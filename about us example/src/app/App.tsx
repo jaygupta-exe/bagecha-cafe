@@ -316,7 +316,20 @@ export default function App() {
 
                 <p className="text-center pt-4 border-t border-[#364c11]/30">
                   Today, our journey continues with multiple outlets including{' '}
-                  <span className="text-[#d4af37]">Mastana Musafir by Adis Café</span> in Jalandhar and Rishikesh.
+                  <motion.span 
+                    className="text-[#d4af37] font-semibold px-2 py-0.5 rounded-lg border border-[#d4af37]/20 shadow-[0_0_15px_rgba(212,175,55,0.1)]"
+                    animate={{ 
+                      boxShadow: [
+                        '0 0 10px rgba(212, 175, 55, 0.1)',
+                        '0 0 20px rgba(212, 175, 55, 0.3)',
+                        '0 0 10px rgba(212, 175, 55, 0.1)'
+                      ]
+                    }}
+                    transition={{ duration: 3, repeat: Infinity }}
+                  >
+                    Mastana Musafir by Adis Café
+                  </motion.span>{' '}
+                  in Rishikesh.
                 </p>
               </div>
             </div>
