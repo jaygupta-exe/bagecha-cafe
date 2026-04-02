@@ -43,7 +43,6 @@ export default function Navbar() {
               alt="Logo"
               fill
               className="object-contain"
-              style={{ filter: "brightness(0)" }}
               sizes="80px"
               priority
             />

@@ -22,6 +22,13 @@ export const metadata: Metadata = {
   description:
     "Experience the finest in pizza, coffee, shakes, and more. Bagecha by Adi's Cafe — where every dish tells a story of crafted taste and premium experience.",
   keywords: ["Bagecha", "Adi's Cafe", "premium cafe", "coffee", "pizza", "gourmet food", "luxury dining"],
+  icons: {
+    icon: [
+      { url: "/logo.png", sizes: "32x32" },
+      { url: "/logo.png", sizes: "16x16" },
+    ],
+    apple: "/logo.png",
+  },
   openGraph: {
     title: "Bagecha by Adi's Cafe — Crafted Taste, Premium Experience",
     description: "Experience the finest in pizza, coffee, shakes, and more.",
