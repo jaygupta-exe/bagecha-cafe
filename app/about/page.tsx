@@ -356,27 +356,66 @@ export default function AboutUs() {
                   </span>
                   {' '}— a nature-comforting oasis featuring indoor plants, water seating, and authentic continental cuisine, where every cup of coffee comes with a breath of fresh air.
                 </p>
-
-                <p className="text-center pt-4 border-t border-[#364c11]/30">
-                  Today, our journey continues with multiple outlets including{' '}
-                  <motion.span 
-                    className="text-[#d4af37] font-semibold px-2 py-0.5 rounded-lg border border-[#d4af37]/20 shadow-[0_0_15px_rgba(212,175,55,0.1)]"
-                    animate={{ 
-                      boxShadow: [
-                        '0 0 10px rgba(212, 175, 55, 0.1)',
-                        '0 0 20px rgba(212, 175, 55, 0.3)',
-                        '0 0 10px rgba(212, 175, 55, 0.1)'
-                      ]
-                    }}
-                    transition={{ duration: 3, repeat: Infinity }}
-                  >
-                    Mastana Musafir by Adis Café
-                  </motion.span>{' '}
-                  in Rishikesh.
-                </p>
               </div>
             </div>
           </div>
+
+          {/* Separate Journey Section - Visually standalone but part of the story flow */}
+          <motion.div
+            className="mt-16 p-10 rounded-3xl text-center border border-[#d4af37]/40 relative overflow-hidden group shadow-2xl"
+            style={{
+              background: 'linear-gradient(135deg, rgba(54, 76, 17, 0.2), rgba(0, 0, 0, 0.8))',
+              boxShadow: '0 20px 50px rgba(0, 0, 0, 0.5), inset 0 0 40px rgba(212, 175, 55, 0.1)'
+            }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            whileHover={{ scale: 1.02 }}
+          >
+            {/* Dynamic Gold Gradient Pulse */}
+            <motion.div 
+              className="absolute inset-0 opacity-20 pointer-events-none"
+              animate={{ 
+                background: [
+                  'radial-gradient(circle at 30% 50%, #d4af37 0%, transparent 60%)',
+                  'radial-gradient(circle at 70% 50%, #d4af37 0%, transparent 60%)',
+                  'radial-gradient(circle at 30% 50%, #d4af37 0%, transparent 60%)',
+                ]
+              }}
+              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+            />
+            
+            {/* Animated border pulse */}
+            <div className="absolute inset-0 border-2 border-transparent group-hover:border-[#d4af37]/20 transition-colors duration-700 rounded-3xl" />
+
+            <div className="relative z-10">
+              <Sparkles className="w-10 h-10 text-[#d4af37] mb-6 mx-auto" />
+              <p className="text-2xl md:text-3xl text-gray-100 font-light leading-relaxed">
+                Today, our journey continues with multiple outlets including{' '}
+                <motion.span 
+                  className="text-[#d4af37] font-bold relative inline-block whitespace-nowrap"
+                  animate={{ 
+                    textShadow: [
+                      '0 0 10px rgba(212, 175, 55, 0.3)',
+                      '0 0 25px rgba(212, 175, 55, 0.8)',
+                      '0 0 10px rgba(212, 175, 55, 0.3)'
+                    ]
+                  }}
+                  transition={{ duration: 4, repeat: Infinity }}
+                >
+                  Mastana Musafir by Adis Café
+                  <motion.div 
+                    className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#d4af37]"
+                    initial={{ scaleX: 0 }}
+                    whileInView={{ scaleX: 1 }}
+                    transition={{ duration: 1, delay: 1 }}
+                  />
+                </motion.span>{' '}
+                in <span className="text-white font-semibold">Rishikesh</span>.
+              </p>
+            </div>
+          </motion.div>
         </motion.div>
       </section>
 
