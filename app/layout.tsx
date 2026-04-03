@@ -44,6 +44,9 @@ export const metadata: Metadata = {
     description: "Experience the finest in pizza, coffee, shakes, and more.",
     type: "website",
   },
+  verification: {
+    google: "xv5EiZrzkOgHvgS54vpqR99dPeXgzW0_0JvrjioQd0w",
+  },
 };
 
 export default function RootLayout({
