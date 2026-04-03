@@ -497,7 +497,7 @@ body {
 .why-glass-card {
   position: relative;
   background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(125, 211, 168, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.08);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow:
@@ -508,10 +508,10 @@ body {
 
 .why-glass-card:hover {
   background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(125, 211, 168, 0.18);
+  border-color: rgba(212, 175, 55, 0.18);
   box-shadow:
     0 16px 64px rgba(0, 0, 0, 0.4),
-    0 0 40px rgba(125, 211, 168, 0.06),
+    0 0 40px rgba(212, 175, 55, 0.06),
     inset 0 1px 0 rgba(255, 255, 255, 0.06);
   transform: translateY(-3px);
 }
@@ -524,7 +524,7 @@ body {
   border-radius: inherit;
   background: radial-gradient(
     ellipse at top left,
-    rgba(125, 211, 168, 0.04) 0%,
+    rgba(212, 175, 55, 0.04) 0%,
     transparent 60%
   );
   opacity: 0;
@@ -544,31 +544,31 @@ body {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: rgba(125, 211, 168, 0.08);
-  border: 1px solid rgba(125, 211, 168, 0.15);
-  color: #7dd3a8;
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  color: #d4af37;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .why-usp-card:hover .why-icon-circle {
-  background: rgba(125, 211, 168, 0.15);
-  border-color: rgba(125, 211, 168, 0.3);
-  box-shadow: 0 0 24px rgba(125, 211, 168, 0.15);
+  background: rgba(212, 175, 55, 0.15);
+  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow: 0 0 24px rgba(212, 175, 55, 0.15);
   transform: scale(1.1);
 }
 
 /* Video showcase cards */
 .why-video-card {
-  border: 1px solid rgba(125, 211, 168, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.08);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .why-video-card:hover {
-  border-color: rgba(125, 211, 168, 0.25);
+  border-color: rgba(212, 175, 55, 0.25);
   box-shadow:
     0 16px 48px rgba(0, 0, 0, 0.5),
-    0 0 40px rgba(125, 211, 168, 0.08);
+    0 0 40px rgba(212, 175, 55, 0.08);
   transform: translateY(-4px);
 }
 
@@ -583,7 +583,7 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(125, 211, 168, 0.3),
+    rgba(212, 175, 55, 0.3),
     transparent
   );
   opacity: 0;

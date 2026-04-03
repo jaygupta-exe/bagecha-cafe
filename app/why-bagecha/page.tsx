@@ -103,8 +103,8 @@ const testimonials = [
 export default function WhyBagechaPage() {
   return (
     <main
-      className="min-h-screen text-white overflow-x-hidden"
-      style={{ background: "linear-gradient(180deg, #0F2A1D 0%, #1a3a2a 50%, #0F2A1D 100%)" }}
+      className="min-h-screen text-[#F5E6D3] overflow-x-hidden selection:bg-[#364c11] relative"
+      style={{ background: "linear-gradient(180deg, #364c11 0%, #253609 100%)" }}
     >
       {/* ══════════ A. HERO ══════════ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -142,13 +142,13 @@ export default function WhyBagechaPage() {
             <Droplets
               className="w-14 h-14 mx-auto mb-6"
               strokeWidth={1.2}
-              style={{ color: "#7dd3a8" }}
+              style={{ color: "#d4af37" }}
             />
           </motion.div>
 
           <motion.p
             className="uppercase tracking-[0.35em] text-sm md:text-base mb-4"
-            style={{ color: "rgba(125, 211, 168, 0.8)", fontFamily: "var(--font-inter)" }}
+            style={{ color: "rgba(212, 175, 55, 0.8)", fontFamily: "var(--font-inter)" }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -163,7 +163,7 @@ export default function WhyBagechaPage() {
               fontSize: "clamp(2.5rem, 7vw, 5.5rem)",
               fontWeight: 700,
               lineHeight: 1.08,
-              background: "linear-gradient(to right, #ffffff, #7dd3a8)",
+              background: "linear-gradient(to right, #F5E6D3, #d4af37)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
@@ -196,7 +196,7 @@ export default function WhyBagechaPage() {
             style={{
               background: "linear-gradient(135deg, #2E5A3D, #3d7a52)",
               boxShadow:
-                "0 12px 40px rgba(46, 90, 61, 0.5), 0 0 60px rgba(125, 211, 168, 0.15)",
+                "0 12px 40px rgba(54, 76, 17, 0.5), 0 0 60px rgba(212, 175, 55, 0.15)",
               fontFamily: "var(--font-inter)",
               color: "#fff",
             }}
@@ -206,7 +206,7 @@ export default function WhyBagechaPage() {
             whileHover={{
               scale: 1.06,
               boxShadow:
-                "0 18px 50px rgba(46, 90, 61, 0.7), 0 0 80px rgba(125, 211, 168, 0.25)",
+                "0 18px 50px rgba(54, 76, 17, 0.7), 0 0 80px rgba(212, 175, 55, 0.25)",
             }}
             whileTap={{ scale: 0.97 }}
           >
@@ -238,7 +238,7 @@ export default function WhyBagechaPage() {
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              "radial-gradient(ellipse at 30% 50%, rgba(125, 211, 168, 0.06) 0%, transparent 60%)",
+              "radial-gradient(ellipse at 30% 50%, rgba(212, 175, 55, 0.06) 0%, transparent 60%)",
           }}
         />
 
@@ -246,7 +246,7 @@ export default function WhyBagechaPage() {
           <Reveal>
             <p
               className="uppercase tracking-[0.3em] text-sm mb-4"
-              style={{ color: "#7dd3a8", fontFamily: "var(--font-inter)" }}
+              style={{ color: "#d4af37", fontFamily: "var(--font-inter)" }}
             >
               The Experience
             </p>
@@ -256,7 +256,7 @@ export default function WhyBagechaPage() {
                 fontFamily: "var(--font-playfair)",
                 fontSize: "clamp(2rem, 5vw, 3.5rem)",
                 fontWeight: 700,
-                color: "#e0f0e8",
+                color: "#F5E6D3",
               }}
             >
               Dine Above Water. Surrounded by Nature.
@@ -268,13 +268,13 @@ export default function WhyBagechaPage() {
               className="why-glass-card p-10 md:p-14 rounded-3xl text-left md:text-center max-w-4xl mx-auto"
             >
               {/* Corner decoration */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#7dd3a8]/10 to-transparent rounded-bl-full pointer-events-none" />
-              <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-[#2E5A3D]/20 to-transparent rounded-tr-full pointer-events-none" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#d4af37]/10 to-transparent rounded-bl-full pointer-events-none" />
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-[#364c11]/20 to-transparent rounded-tr-full pointer-events-none" />
 
               <div className="relative z-10 space-y-6 text-white/80 text-lg leading-relaxed" style={{ fontFamily: "var(--font-inter)" }}>
                 <p>
                   Imagine sitting just above a gently flowing stream of water, the{" "}
-                  <span className="text-[#7dd3a8] font-medium">
+                  <span className="text-[#d4af37] font-medium">
                     soft sound of ripples
                   </span>{" "}
                   harmonising with curated ambient music. Around you, lush green
@@ -282,7 +282,7 @@ export default function WhyBagechaPage() {
                   paint the air.
                 </p>
                 <p>
-                  At <span className="text-[#7dd3a8] font-semibold" style={{ fontFamily: "var(--font-playfair)" }}>Bagecha by Adis</span>, we
+                  At <span className="text-[#d4af37] font-semibold" style={{ fontFamily: "var(--font-playfair)" }}>Bagecha by Adis</span>, we
                   haven&apos;t just built a cafe — we&apos;ve created a{" "}
                   <span className="text-white font-medium">sensory sanctuary</span>.
                   The aroma of freshly brewed coffee mingles with the earthy
@@ -291,7 +291,7 @@ export default function WhyBagechaPage() {
                 </p>
                 <p>
                   This isn&apos;t just the{" "}
-                  <span className="text-[#7dd3a8] font-medium">
+                  <span className="text-[#d4af37] font-medium">
                     best cafe in Jalandhar
                   </span>{" "}
                   — it&apos;s a destination. A moment frozen in time where food,
@@ -313,7 +313,7 @@ export default function WhyBagechaPage() {
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              "linear-gradient(180deg, transparent, rgba(46,90,61,0.08) 50%, transparent)",
+              "linear-gradient(180deg, transparent, rgba(54, 76, 17, 0.08) 50%, transparent)",
           }}
         />
 
@@ -322,7 +322,7 @@ export default function WhyBagechaPage() {
             <div className="text-center mb-16 md:mb-20">
               <p
                 className="uppercase tracking-[0.3em] text-sm mb-4"
-                style={{ color: "#7dd3a8", fontFamily: "var(--font-inter)" }}
+                style={{ color: "#d4af37", fontFamily: "var(--font-inter)" }}
               >
                 Why Choose Us
               </p>
@@ -331,7 +331,7 @@ export default function WhyBagechaPage() {
                   fontFamily: "var(--font-playfair)",
                   fontSize: "clamp(2rem, 5vw, 3.5rem)",
                   fontWeight: 700,
-                  color: "#e0f0e8",
+                  color: "#F5E6D3",
                 }}
               >
                 What Makes Bagecha Unforgettable
@@ -354,7 +354,7 @@ export default function WhyBagechaPage() {
                         style={{
                           fontFamily: "var(--font-playfair)",
                           fontWeight: 600,
-                          color: "#e0f0e8",
+                          color: "#F5E6D3",
                         }}
                       >
                         {usp.title}
@@ -381,7 +381,7 @@ export default function WhyBagechaPage() {
             <div className="text-center mb-16 md:mb-20">
               <p
                 className="uppercase tracking-[0.3em] text-sm mb-4"
-                style={{ color: "#7dd3a8", fontFamily: "var(--font-inter)" }}
+                style={{ color: "#d4af37", fontFamily: "var(--font-inter)" }}
               >
                 See It For Yourself
               </p>
@@ -390,7 +390,7 @@ export default function WhyBagechaPage() {
                   fontFamily: "var(--font-playfair)",
                   fontSize: "clamp(2rem, 5vw, 3.5rem)",
                   fontWeight: 700,
-                  color: "#e0f0e8",
+                  color: "#F5E6D3",
                 }}
               >
                 A Glimpse Into Bagecha
@@ -417,12 +417,12 @@ export default function WhyBagechaPage() {
                     className="absolute inset-0 transition-opacity duration-500"
                     style={{
                       background:
-                        "linear-gradient(to top, rgba(15,42,29,0.85) 0%, rgba(15,42,29,0.2) 40%, rgba(15,42,29,0.1) 100%)",
+                        "linear-gradient(to top, rgba(54,76,17,0.85) 0%, rgba(54,76,17,0.2) 40%, rgba(54,76,17,0.1) 100%)",
                     }}
                   />
 
                   {/* border glow on hover */}
-                  <div className="absolute inset-0 border-2 border-transparent group-hover:border-[#7dd3a8]/30 rounded-2xl transition-all duration-500 pointer-events-none" />
+                  <div className="absolute inset-0 border-2 border-transparent group-hover:border-[#d4af37]/30 rounded-2xl transition-all duration-500 pointer-events-none" />
 
                   {/* overlay text */}
                   <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-10">
@@ -438,7 +438,7 @@ export default function WhyBagechaPage() {
                       {vid.overlay}
                     </h3>
                     <div
-                      className="mt-3 w-12 h-[2px] bg-[#7dd3a8] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"
+                      className="mt-3 w-12 h-[2px] bg-[#d4af37] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"
                     />
                   </div>
                 </div>
@@ -454,7 +454,7 @@ export default function WhyBagechaPage() {
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              "radial-gradient(ellipse at 70% 50%, rgba(125, 211, 168, 0.05) 0%, transparent 60%)",
+              "radial-gradient(ellipse at 70% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 60%)",
           }}
         />
 
@@ -463,7 +463,7 @@ export default function WhyBagechaPage() {
             <div className="text-center mb-16 md:mb-20">
               <p
                 className="uppercase tracking-[0.3em] text-sm mb-4"
-                style={{ color: "#7dd3a8", fontFamily: "var(--font-inter)" }}
+                style={{ color: "#d4af37", fontFamily: "var(--font-inter)" }}
               >
                 Loved By Visitors
               </p>
@@ -472,7 +472,7 @@ export default function WhyBagechaPage() {
                   fontFamily: "var(--font-playfair)",
                   fontSize: "clamp(2rem, 5vw, 3.5rem)",
                   fontWeight: 700,
-                  color: "#e0f0e8",
+                  color: "#F5E6D3",
                 }}
               >
                 What People Are Saying
@@ -488,7 +488,7 @@ export default function WhyBagechaPage() {
                     <Quote
                       className="w-8 h-8 mb-4"
                       strokeWidth={1.2}
-                      style={{ color: "rgba(125, 211, 168, 0.3)" }}
+                      style={{ color: "rgba(212, 175, 55, 0.3)" }}
                     />
 
                     {/* Stars */}
@@ -515,7 +515,7 @@ export default function WhyBagechaPage() {
 
                     <div className="pt-4 border-t border-white/8">
                       <p
-                        className="text-[#7dd3a8] font-semibold"
+                        className="text-[#d4af37] font-semibold"
                         style={{ fontFamily: "var(--font-inter)" }}
                       >
                         {t.name}
@@ -539,7 +539,7 @@ export default function WhyBagechaPage() {
           className="absolute inset-0"
           style={{
             background:
-              "radial-gradient(circle at center, rgba(46,90,61,0.25) 0%, transparent 60%)",
+              "radial-gradient(circle at center, rgba(54,76,17,0.25) 0%, transparent 60%)",
           }}
         />
 
@@ -548,7 +548,7 @@ export default function WhyBagechaPage() {
           className="absolute bottom-0 left-0 right-0 h-40 pointer-events-none"
           style={{
             background:
-              "linear-gradient(to top, rgba(125,211,168,0.06), transparent)",
+              "linear-gradient(to top, rgba(212,175,55,0.06), transparent)",
           }}
           animate={{ opacity: [0.4, 0.8, 0.4] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
@@ -559,9 +559,9 @@ export default function WhyBagechaPage() {
             <motion.div
               animate={{
                 textShadow: [
-                  "0 0 20px rgba(125, 211, 168, 0.3)",
-                  "0 0 40px rgba(125, 211, 168, 0.6)",
-                  "0 0 20px rgba(125, 211, 168, 0.3)",
+                  "0 0 20px rgba(212, 175, 55, 0.3)",
+                  "0 0 40px rgba(212, 175, 55, 0.6)",
+                  "0 0 20px rgba(212, 175, 55, 0.3)",
                 ],
               }}
               transition={{ duration: 3, repeat: Infinity }}
@@ -573,7 +573,7 @@ export default function WhyBagechaPage() {
                   fontSize: "clamp(2.5rem, 6vw, 5rem)",
                   fontWeight: 700,
                   background:
-                    "linear-gradient(to right, #7dd3a8, #ffffff, #7dd3a8)",
+                    "linear-gradient(to right, #d4af37, #F5E6D3, #d4af37)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
@@ -597,16 +597,16 @@ export default function WhyBagechaPage() {
               rel="noopener noreferrer"
               className="group relative inline-flex items-center gap-3 px-12 py-5 rounded-full overflow-hidden text-lg font-semibold transition-all duration-300"
               style={{
-                background: "linear-gradient(135deg, #7dd3a8, #4ba87a)",
+                background: "linear-gradient(135deg, #d4af37, #b8932d)",
                 boxShadow:
-                  "0 15px 40px rgba(125, 211, 168, 0.35), 0 0 60px rgba(125, 211, 168, 0.15)",
-                color: "#0F2A1D",
+                  "0 15px 40px rgba(212, 175, 55, 0.35), 0 0 60px rgba(212, 175, 55, 0.15)",
+                color: "#364c11",
                 fontFamily: "var(--font-inter)",
               }}
               whileHover={{
                 scale: 1.06,
                 boxShadow:
-                  "0 20px 50px rgba(125, 211, 168, 0.5), 0 0 80px rgba(125, 211, 168, 0.25)",
+                  "0 20px 50px rgba(212, 175, 55, 0.5), 0 0 80px rgba(212, 175, 55, 0.25)",
               }}
               whileTap={{ scale: 0.96 }}
             >
@@ -626,21 +626,21 @@ export default function WhyBagechaPage() {
             <div className="mt-16 flex justify-center gap-8 md:gap-12 flex-wrap text-white/30">
               <motion.div
                 className="text-center"
-                whileHover={{ scale: 1.1, color: "#7dd3a8" }}
+                whileHover={{ scale: 1.1, color: "#d4af37" }}
               >
                 <Droplets className="w-7 h-7 mx-auto mb-2" />
                 <p className="text-xs" style={{ fontFamily: "var(--font-inter)" }}>Water Sitting</p>
               </motion.div>
               <motion.div
                 className="text-center"
-                whileHover={{ scale: 1.1, color: "#7dd3a8" }}
+                whileHover={{ scale: 1.1, color: "#d4af37" }}
               >
                 <Leaf className="w-7 h-7 mx-auto mb-2" />
                 <p className="text-xs" style={{ fontFamily: "var(--font-inter)" }}>Nature Vibes</p>
               </motion.div>
               <motion.div
                 className="text-center"
-                whileHover={{ scale: 1.1, color: "#7dd3a8" }}
+                whileHover={{ scale: 1.1, color: "#d4af37" }}
               >
                 <Sparkles className="w-7 h-7 mx-auto mb-2" />
                 <p className="text-xs" style={{ fontFamily: "var(--font-inter)" }}>Premium Dining</p>
