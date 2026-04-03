@@ -488,3 +488,108 @@ body {
 .founder-carousel-container:hover .founder-carousel-slide img {
   transform: scale(1.12);
 }
+
+/* ==========================================
+   WHY BAGECHA PAGE
+   ========================================== */
+
+/* Glassmorphism cards */
+.why-glass-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(125, 211, 168, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.why-glass-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(125, 211, 168, 0.18);
+  box-shadow:
+    0 16px 64px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(125, 211, 168, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transform: translateY(-3px);
+}
+
+/* USP card extra effects */
+.why-usp-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    ellipse at top left,
+    rgba(125, 211, 168, 0.04) 0%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.why-usp-card:hover::before {
+  opacity: 1;
+}
+
+/* Icon circle */
+.why-icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(125, 211, 168, 0.08);
+  border: 1px solid rgba(125, 211, 168, 0.15);
+  color: #7dd3a8;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.why-usp-card:hover .why-icon-circle {
+  background: rgba(125, 211, 168, 0.15);
+  border-color: rgba(125, 211, 168, 0.3);
+  box-shadow: 0 0 24px rgba(125, 211, 168, 0.15);
+  transform: scale(1.1);
+}
+
+/* Video showcase cards */
+.why-video-card {
+  border: 1px solid rgba(125, 211, 168, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.why-video-card:hover {
+  border-color: rgba(125, 211, 168, 0.25);
+  box-shadow:
+    0 16px 48px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(125, 211, 168, 0.08);
+  transform: translateY(-4px);
+}
+
+/* Testimonial card */
+.why-testimonial-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(125, 211, 168, 0.3),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.why-testimonial-card:hover::after {
+  opacity: 1;
+}

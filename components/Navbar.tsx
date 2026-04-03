@@ -10,6 +10,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const navLinks = [
   { name: "About Us", href: "/about" },
   { name: "Menu", href: "/menu" },
+  { name: "Why Bagecha", href: "/why-bagecha" },
   { name: "Location", href: "/location" },
 ];
 
