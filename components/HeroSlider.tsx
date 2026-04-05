@@ -16,10 +16,10 @@ const slides = [
   {
     id: 2,
     label: "Fresh Bites",
-    title: "Spinach Corn Sandwich",
-    subtitle: "Grilled perfection with a green twist.",
+    title: "Paneer Tika Sandwich",
+    subtitle: "Spiced paneer, grilled to perfection.",
     cta: "Order Now",
-    video: "/assests/sandwich second final.mp4"
+    video: "/assests/paneer tika sandwich.mp4"
   },
   {
     id: 3,
@@ -28,6 +28,14 @@ const slides = [
     subtitle: "Classic, cheesy, wood-fired perfection.",
     cta: "Order Now",
     video: "/assests/second final.mp4"
+  },
+  {
+    id: 4,
+    label: "Refreshing Sips",
+    title: "Blue Blossom Mocktail",
+    subtitle: "A vibrant, cooling floral experience.",
+    cta: "Order Now",
+    video: "/assests/blue bloosm mocktail.mp4"
   }
 ];
 
