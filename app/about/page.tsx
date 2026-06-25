@@ -354,7 +354,7 @@ export default function AboutUs() {
                   <span className="text-[#d4af37] font-semibold" style={{ fontFamily: 'var(--font-playfair)' }}>
                     Bagecha by Adis Café
                   </span>
-                  {' '}— a nature-comforting oasis featuring indoor plants, water seating, and authentic continental cuisine, where every cup of coffee comes with a breath of fresh air.
+                  {' '}— a nature-comforting oasis and widely recognized as the best aesthetic cafe in Jalandhar, featuring indoor plants, water seating, and authentic continental cuisine, where every cup of coffee comes with a breath of fresh air.
                 </p>
               </div>
             </div>
@@ -468,14 +468,14 @@ export default function AboutUs() {
                   <div className="founder-carousel-slide">
                     <img 
                       src="/assests/founder%20photo/image%203.jpeg" 
-                      alt="Aditya Sharma - Founder of Adis Cafe" 
+                      alt="Aditya Sharma, Founder of Adis Cafe, working on continental dishes in Jalandhar" 
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="founder-carousel-slide">
                     <img 
                       src="/assests/founder%20photo/founder%20photo%202.png" 
-                      alt="Aditya Sharma - Founder of Adis Cafe" 
+                      alt="Founder Aditya Sharma presenting Bagecha by Adis Cafe garden ambiance" 
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -604,7 +604,7 @@ export default function AboutUs() {
                   >
                     <img 
                       src={image} 
-                      alt={`Bagecha Gallery ${(index % galleryRow1.length) + 1}`}
+                      alt={`Beautiful interior and garden ambiance at Bagecha Cafe in Jalandhar - photo ${(index % galleryRow1.length) + 1}`}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       loading="lazy"
                     />
@@ -632,7 +632,7 @@ export default function AboutUs() {
                   >
                     <img 
                       src={image} 
-                      alt={`Bagecha Gallery ${(index % galleryRow2.length) + 9}`}
+                      alt={`Gourmet continental food and drinks served at Bagecha Cafe - photo ${(index % galleryRow2.length) + 9}`}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       loading="lazy"
                     />

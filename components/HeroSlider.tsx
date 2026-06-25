@@ -123,12 +123,12 @@ export default function HeroSlider() {
                 {slides[currentSlide].label}
               </motion.span>
               
-              <motion.h1 
+              <motion.h2 
                 className="text-5xl md:text-6xl lg:text-8xl font-bold text-white mb-4 md:mb-6 leading-[1.1] whitespace-pre-wrap"
                 style={{ fontFamily: 'var(--font-playfair)', textShadow: "0 4px 30px rgba(0,0,0,0.5)" }}
               >
                 {slides[currentSlide].title}
-              </motion.h1>
+              </motion.h2>
 
               <motion.p 
                 className="text-base md:text-lg lg:text-2xl text-white/90 italic mb-8 md:mb-10"

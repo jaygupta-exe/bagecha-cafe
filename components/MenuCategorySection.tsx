@@ -64,7 +64,7 @@ export default function MenuCategorySection({ category, index }: MenuCategorySec
               src={category.images[currentIndex]} 
               fill 
               className="object-cover" 
-              alt={`${category.title} showcase photo`}
+              alt={`Gourmet ${category.title} served at Bagecha, Jalandhar's best aesthetic cafe`}
               sizes="(max-width: 768px) 100vw, 50vw"
               priority={currentIndex === 0 || currentIndex === 1}
             />

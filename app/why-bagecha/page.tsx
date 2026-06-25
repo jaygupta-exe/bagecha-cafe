@@ -184,7 +184,7 @@ export default function WhyBagechaPage() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.7 }}
           >
-            Step into Bagecha by Adis — where water, nature, and premium dining
+            Step into Bagecha by Adis — the best aesthetic cafe in Jalandhar, where water, nature, and premium dining
             come together to create an experience you&apos;ll never forget.
           </motion.p>
 

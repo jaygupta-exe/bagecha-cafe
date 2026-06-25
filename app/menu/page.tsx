@@ -18,6 +18,23 @@ export default function MenuPage() {
       {/* Hero: cinematic video slider */}
       <HeroSlider />
 
+      {/* Menu Page Header / H1 */}
+      <div className="text-center pt-24 pb-8 px-6 relative z-10 max-w-4xl mx-auto">
+        <h1 
+          className="text-4xl md:text-6xl font-bold text-[#d4af37] tracking-tight"
+          style={{ fontFamily: 'var(--font-playfair)' }}
+        >
+          Our Gourmet Menu
+        </h1>
+        <p 
+          className="text-white/70 mt-4 text-base md:text-lg font-light leading-relaxed"
+          style={{ fontFamily: 'var(--font-inter)' }}
+        >
+          Handcrafted coffees, wood-fired artisan pizzas, and mouthwatering continental meals. Indulge in culinary perfection at Bagecha by Adis, Jalandhar's best aesthetic cafe.
+        </p>
+        <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-[#d4af37] to-transparent mx-auto mt-6" />
+      </div>
+
       {/* Menu Categories */}
       <div className="flex flex-col gap-12 md:gap-24 lg:gap-32 w-full pb-16">
         {MENU_DATA.map((category, index) => (

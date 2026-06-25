@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "First Water Sitting Cafe in Jalandhar | Bagecha by Adis",
+  title: "Unique Water Sitting & Garden Ambiance | Bagecha by Adis",
   description:
-    "Experience the first water sitting cafe in Jalandhar. Visit Bagecha by Adis for a unique dining experience with nature and premium ambiance.",
+    "Discover what makes Bagecha by Adis Jalandhar's most unique dining spot. Experience our signature indoor plant-lined water seating and photogenic nature aesthetics.",
   keywords: [
     "water sitting cafe",
     "best cafe in Jalandhar",
@@ -13,12 +13,32 @@ export const metadata: Metadata = {
     "Instagram worthy cafe",
     "premium cafe Jalandhar",
   ],
+  alternates: {
+    canonical: "https://bagechabyadis.in/why-bagecha",
+  },
   openGraph: {
-    title: "First Water Sitting Cafe in Jalandhar | Bagecha by Adis",
+    title: "Unique Water Sitting & Garden Ambiance | Bagecha by Adis",
     description:
-      "Experience the first water sitting cafe in Jalandhar. Visit Bagecha by Adis for a unique dining experience with nature and premium ambiance.",
+      "Discover what makes Bagecha by Adis Jalandhar's most unique dining spot. Experience our signature indoor plant-lined water seating and photogenic nature aesthetics.",
     type: "website",
     url: "https://bagechabyadis.in/why-bagecha",
+    siteName: "Bagecha by Adis",
+    images: [
+      {
+        url: "https://bagechabyadis.in/logo.png",
+        width: 512,
+        height: 512,
+        alt: "Bagecha by Adis Cafe Logo",
+      },
+    ],
+    locale: "en_IN",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Unique Water Sitting & Garden Ambiance | Bagecha by Adis",
+    description:
+      "Discover what makes Bagecha by Adis Jalandhar's most unique dining spot. Experience our signature indoor plant-lined water seating and photogenic nature aesthetics.",
+    images: ["https://bagechabyadis.in/logo.png"],
   },
 };
 

@@ -41,7 +41,7 @@ export default function Navbar() {
           <div className="relative w-12 h-12 md:w-20 md:h-20">
             <Image
               src="/logo.png"
-              alt="Logo"
+              alt="Bagecha by Adis Cafe Logo"
               fill
               className="object-contain"
               sizes="80px"

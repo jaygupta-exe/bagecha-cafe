@@ -159,7 +159,7 @@ function CategoryCard({
             <div className="category-image-glow" />
             <Image
               src={category.image}
-              alt={category.title}
+              alt={`Delicious gourmet ${category.title} served at Bagecha, Jalandhar's best aesthetic cafe`}
               fill
               className="object-cover category-image"
               sizes="(max-width: 768px) 100vw, 672px"
@@ -230,7 +230,7 @@ function CategoryCard({
           <div className="category-image-glow" />
           <Image
             src={category.image}
-            alt={category.title}
+            alt={`Delicious gourmet ${category.title} served at Bagecha, Jalandhar's best aesthetic cafe`}
             fill
             className="object-cover category-image"
             sizes="(max-width: 768px) 100vw, 50vw"
