@@ -405,7 +405,7 @@ export default function AboutUs() {
                   transition={{ duration: 4, repeat: Infinity }}
                 >
                   Mastana Musafir by Adis Café
-                  <motion.div 
+                  <motion.span 
                     className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#d4af37]"
                     initial={{ scaleX: 0 }}
                     whileInView={{ scaleX: 1 }}

@@ -116,6 +116,20 @@ export default function MenuCategorySection({ category, index }: MenuCategorySec
             </div>
           </div>
 
+          {/* Category Headers (Desktop) */}
+          {category.priceHeaders && (
+            <div className="hidden md:flex justify-end gap-6 mb-4 border-b border-white/10 pb-2">
+              {category.priceHeaders.map((header, hIdx) => (
+                <span 
+                  key={hIdx} 
+                  className="text-xs font-semibold text-[#a2ac8e] font-sans uppercase tracking-wider text-center w-28 lg:w-32 shrink-0"
+                >
+                  {header}
+                </span>
+              ))}
+            </div>
+          )}
+
           {/* Items List */}
           <div className="flex flex-col gap-5 md:gap-6">
             {category.items.map((item, idx) => (
@@ -127,15 +141,47 @@ export default function MenuCategorySection({ category, index }: MenuCategorySec
                   <span className="text-lg md:text-xl font-medium text-white/90 font-sans group-hover/list:text-[#F5E6D3] transition-colors">
                     {item.name}
                   </span>
-                  <div className="menu-leader group-hover/list:border-[rgba(245,230,211,0.6)] transition-colors"></div>
-                  <span className="text-lg md:text-xl font-semibold text-[#d78a3a] font-serif shrink-0">
-                    ₹{item.price}
-                  </span>
+                  
+                  {item.prices ? (
+                    <div className="hidden md:flex items-end ml-auto">
+                      <div className="flex gap-6 shrink-0">
+                        {item.prices.map((price, pIdx) => (
+                          <span 
+                            key={pIdx} 
+                            className="text-lg md:text-xl font-semibold text-[#d78a3a] font-serif text-center w-28 lg:w-32 shrink-0"
+                          >
+                            ₹{price}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <span className="text-lg md:text-xl font-semibold text-[#d78a3a] font-serif shrink-0 ml-4">
+                      ₹{item.price}
+                    </span>
+                  )}
                 </div>
                 {item.desc && (
                   <p className="text-sm text-white/50 font-sans w-3/4 leading-relaxed group-hover/list:text-white/70 transition-colors">
                     {item.desc}
                   </p>
+                )}
+                {/* Mobile Prices (Only visible on mobile screens) */}
+                {item.prices && (
+                  <div className="flex md:hidden flex-wrap gap-2 mt-2 mb-1">
+                    {item.prices.map((price, pIdx) => (
+                      <span 
+                        key={pIdx} 
+                        className="text-[11px] bg-white/5 border border-white/10 rounded-full px-3 py-1.5 text-white/80 font-sans flex items-center gap-1.5"
+                      >
+                        <span className="text-[#a2ac8e] font-semibold uppercase text-[9px] tracking-wider">
+                          {category.priceHeaders?.[pIdx] ? category.priceHeaders[pIdx].replace(" Crust 11 Inch", "") : ""}
+                        </span>
+                        <span className="w-[1px] h-3 bg-white/10" />
+                        <strong className="text-[#d78a3a] font-serif font-bold text-sm">₹{price}</strong>
+                      </span>
+                    ))}
+                  </div>
                 )}
               </div>
             ))}
